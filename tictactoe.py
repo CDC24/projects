@@ -23,7 +23,8 @@ def computerTurn():             #picks a random unused square and places the com
 
 
 def mouseClick(event):
-    return
+    letters = TextAsset("X", fill=black, style="bold 100 pt Times")
+    Sprite (letters,(mouse.x,mouse.y))
 
 
 if __name__ == '__main__':
@@ -37,20 +38,23 @@ if __name__ == '__main__':
     
     #setting up board
     
-    HEIGHT = 300
-    WIDTH = 300
+    HEIGHT = 400
+    WIDTH = 400
     
     vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(1,black),black)
     horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(1,black),black)
     
     
     
-    
+    # these sprite the grid
     Sprite(horizBoardLine,(100,100+(HEIGHT/3)))
     Sprite(horizBoardLine,(100,100+(2*HEIGHT/3)))
     Sprite(vertBoardLine,(100+(WIDTH/3),100))
     Sprite(vertBoardLine,(100+(2*WIDTH/3),100))
     
+    
+    
+    App().listenMouseEvent('mouseclick', mouseClick)
     App().run()
     
     
