@@ -54,7 +54,7 @@ if __name__ == '__main__':
     
     
     
-    App().listenMouseEvent('mouseclick', mouseClick)
+    App().listenMouseEvent('click', mouseClick)
     App().run()
     
     
