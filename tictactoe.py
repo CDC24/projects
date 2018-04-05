@@ -26,9 +26,13 @@ def computerTurn():             #picks a random unused square and places the com
 
 
 def mouseClick(event):
-    if 100<= event.x <= (100+(WIDTH/3)) and 100<= event.y <=(100+(HEIGHT/3)):
-        letters = TextAsset("X", fill=black, style='bold 100pt Times')
-        Sprite (letters,(100+(WIDTH/6),100+(HEIGHT/6))
+    if 100<= event.x <= (100+(WIDTH/3)):
+        if 100<= event.y <=(100+(HEIGHT/3)):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(120,100))
+        if (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(120,230))
 
 
 if __name__ == '__main__':
