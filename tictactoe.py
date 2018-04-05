@@ -4,6 +4,16 @@
 
 
 from ggame import *
+from random import randint
+
+
+#Establishes coordintes of each box
+BOX1 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
+BOX2 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
+BOX3 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
+BOX4 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
+BOX5 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
+BOX6 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
 
 
 def isEmpty(squarenum):         #returns True if the square "squarenum" is empty and False if there is already an X or O there.
@@ -19,12 +29,14 @@ def fullboard():                #returns True if every square is filled up with 
 
 
 def computerTurn():             #picks a random unused square and places the computer piece there.
-    return
+    horiz = randint(1,3)
+    vert = randint(1,3)
 
 
 def mouseClick(event):
-    letters = TextAsset("X", fill=black, style='bold 100pt Times')
-    Sprite (letters,(390,380))
+    if mouse.x <= (100+(WIDTH/3)):
+        letters = TextAsset("X", fill=black, style='bold 100pt Times')
+        Sprite (letters,(event.x,event.y))
 
 
 if __name__ == '__main__':
