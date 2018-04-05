@@ -27,15 +27,32 @@ def computerTurn():             #picks a random unused square and places the com
 
 def mouseClick(event):
     if 100<= event.x <= (100+(WIDTH/3)):
+        
         if 100<= event.y <=(100+(HEIGHT/3)):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,100))
+            
         if (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,230))
+            
         if (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,360))
+            
+    if (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):
+        
+        if 100<= event.y <=(100+(HEIGHT/3)):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(250,100))
+            
+        if (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(250,230))
+            
+        if (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(250,360))
 
 
 if __name__ == '__main__':
