@@ -65,7 +65,7 @@ def computerTurn():             #picks a random unused square and places the com
 
 def mouseClick(event):                   #responds to clicks; the player's turn
 
-Xs = TextAsset("X", fill=black, style='bold 100pt Times')
+    Xs = TextAsset("X", fill=black, style='bold 100pt Times')
 
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
