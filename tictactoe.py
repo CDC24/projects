@@ -23,36 +23,91 @@ def fullboard():                #returns True if every square is filled up with 
 def computerTurn():             #picks a random unused square and places the computer piece there.
     horiz = randint(1,3)
     vert = randint(1,3)
+    if horiz==1:                                        #decides for first column numbers
+        
+        if vert == 1:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(120,100))
+            
+        elif vert == 2:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(120,230))
+            
+        elif vert == 3:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(120,360))
+            
+    elif horiz == 2:                                    #decides for second column numbers
+        
+        if vert == 1:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(250,100))
+            
+        elif vert == 2:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(250,230))
+            
+        elif vert == 3:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(250,360))
+            
+    elif horiz == 3:                            #decides for third column numbers
+        
+        if vert == 1:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(380,100))
+            
+        elif vert == 2:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(380,230))
+            
+        elif vert == 3:
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(380,360))
 
 
-def mouseClick(event):
-    if 100<= event.x <= (100+(WIDTH/3)):
+def mouseClick(event):                                                          #responds to clicks; the player's turn
+    if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
         if 100<= event.y <=(100+(HEIGHT/3)):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,100))
             
-        if (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,230))
             
-        if (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,360))
             
-    if (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):
+    elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
         
         if 100<= event.y <=(100+(HEIGHT/3)):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(250,100))
             
-        if (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(250,230))
             
-        if (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(250,360))
+            
+    elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
+        
+        if 100<= event.y <=(100+(HEIGHT/3)):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(380,100))
+            
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(380,230))
+            
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(380,360))
 
 
 if __name__ == '__main__':
