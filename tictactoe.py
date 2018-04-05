@@ -26,43 +26,43 @@ def computerTurn():             #picks a random unused square and places the com
     if horiz==1:                                        #decides for first column numbers
         
         if vert == 1:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,100))
             
         elif vert == 2:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,230))
             
         elif vert == 3:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,360))
             
     elif horiz == 2:                                    #decides for second column numbers
         
         if vert == 1:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(250,100))
             
         elif vert == 2:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(250,230))
             
         elif vert == 3:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(250,360))
             
     elif horiz == 3:                            #decides for third column numbers
         
         if vert == 1:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(380,100))
             
         elif vert == 2:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(380,230))
             
         elif vert == 3:
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            letters = TextAsset("O", fill=black, style='bold 100pt Times')
             Sprite (letters,(380,360))
 
 
