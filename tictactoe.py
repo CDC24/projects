@@ -46,10 +46,10 @@ if __name__ == '__main__':
     
     
     
-    Sprite(horizBoardLine(200+HEIGHT/3,200))
-    Sprite(horizBoardLine(200+(2*HEIGHT/3),200))
-    Sprite(vertBoardLine(200,200+WIDTH/3))
-    Sprite(vertBoardLine(200,200+(2*WIDTH/3)))
+    Sprite(horizBoardLine,(10+HEIGHT/3,10))
+    Sprite(horizBoardLine,(10+(2*HEIGHT/3),10))
+    Sprite(vertBoardLine,(10,10+WIDTH/3))
+    Sprite(vertBoardLine,(10,10+(2*WIDTH/3)))
     
     App().run()
     
