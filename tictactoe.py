@@ -30,36 +30,31 @@ if __name__ == '__main__':
 
 
 
-
-
-
-
-
-#graphics
-
-black = Color(0x000000,1)
-red = Color(0xFF0000,1)
-
-#setting up board
-
-HEIGHT = 300
-WIDTH = 300
-
-vertBoardLine = RectangleAsset(WIDTH,HEIGHT,LineStyle(1,black),black)
-horizBoardLine = RectangleAsset(HEIGHT,WIDTH,LineStyle(1,black),black)
-
-
-
-
-Sprite(horizBoardLine(200+HEIGHT/3,200))
-Sprite(horizBoardLine(200+(2*HEIGHT/3),200))
-Sprite(vertBoardLine(200,200+WIDTH/3))
-Sprite(vertBoardLine(200,200+(2*WIDTH/3)))
-
-App().run()
-
-
-
-
-
-
+    #graphics
+    
+    black = Color(0x000000,1)
+    red = Color(0xFF0000,1)
+    
+    #setting up board
+    
+    HEIGHT = 300
+    WIDTH = 300
+    
+    vertBoardLine = RectangleAsset(2,200,LineStyle(1,black),black)
+    horizBoardLine = RectangleAsset(200,2,LineStyle(1,black),black)
+    
+    
+    
+    
+    Sprite(horizBoardLine(200+HEIGHT/3,200))
+    Sprite(horizBoardLine(200+(2*HEIGHT/3),200))
+    Sprite(vertBoardLine(200,200+WIDTH/3))
+    Sprite(vertBoardLine(200,200+(2*WIDTH/3)))
+    
+    App().run()
+    
+    
+    
+    
+    
+    
