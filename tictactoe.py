@@ -40,16 +40,16 @@ if __name__ == '__main__':
     HEIGHT = 300
     WIDTH = 300
     
-    vertBoardLine = RectangleAsset(2,200,LineStyle(1,black),black)
-    horizBoardLine = RectangleAsset(200,2,LineStyle(1,black),black)
+    vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(1,black),black)
+    horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(1,black),black)
     
     
     
     
-    Sprite(horizBoardLine,(10+HEIGHT/3,10))
-    Sprite(horizBoardLine,(10+(2*HEIGHT/3),10))
-    Sprite(vertBoardLine,(10,10+WIDTH/3))
-    Sprite(vertBoardLine,(10,10+(2*WIDTH/3)))
+    Sprite(horizBoardLine,(100,100+(HEIGHT/3)))
+    Sprite(horizBoardLine,(100,100+(2*HEIGHT/3)))
+    Sprite(vertBoardLine,(100+(WIDTH/3),100))
+    Sprite(vertBoardLine,(100+(2*WIDTH/3),100))
     
     App().run()
     
