@@ -63,56 +63,50 @@ def computerTurn():             #picks a random unused square and places the com
             Sprite (Os,(380,360))
 
 
-def mouseClick(event):                                                          #responds to clicks; the player's turn
+def mouseClick(event):                   #responds to clicks; the player's turn
+
+Xs = TextAsset("X", fill=black, style='bold 100pt Times')
+
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
         if 100<= event.y <=(100+(HEIGHT/3)):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(120,100))
+            Sprite (Xs,(120,100))
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(120,230))
+            Sprite (Xs,(120,230))
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(120,360))
+            Sprite (Xs,(120,360))
             computerTurn()
             
     elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
         
         if 100<= event.y <=(100+(HEIGHT/3)):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(250,100))
+            Sprite (Xs,(250,100))
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(250,230))
+            Sprite (Xs,(250,230))
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(250,360))
+            Sprite (Xs,(250,360))
             computerTurn()
             
     elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
         
         if 100<= event.y <=(100+(HEIGHT/3)):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(380,100))
+            Sprite (Xs,(380,100))
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(380,230))
+            Sprite (Xs,(380,230))
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
-            letters = TextAsset("X", fill=black, style='bold 100pt Times')
-            Sprite (letters,(380,360))
+            Sprite (Xs,(380,360))
             computerTurn()
 
 
