@@ -23,8 +23,8 @@ def computerTurn():             #picks a random unused square and places the com
 
 
 def mouseClick(event):
-    letters = TextAsset("X", fill=black, style="bold 100 pt Times")
-    Sprite (letters,(mouse.x,mouse.y))
+    letters = TextAsset("X", fill=black, style='bold 100pt Times')
+    Sprite (letters,(390,380))
 
 
 if __name__ == '__main__':
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     
     
     
-    App().listenMouseEvent('click', mouseClick)
+    App().listenMouseEvent("click",mouseClick)
     App().run()
     
     
