@@ -33,6 +33,9 @@ def mouseClick(event):
         if (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
             letters = TextAsset("X", fill=black, style='bold 100pt Times')
             Sprite (letters,(120,230))
+        if (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+            letters = TextAsset("X", fill=black, style='bold 100pt Times')
+            Sprite (letters,(120,360))
 
 
 if __name__ == '__main__':
