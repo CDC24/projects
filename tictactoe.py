@@ -6,15 +6,7 @@
 from ggame import *
 from random import randint
 
-"""
-#Establishes coordintes of each box
-BOX1 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
-BOX2 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
-BOX3 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
-BOX4 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
-BOX5 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
-BOX6 = (x<=100+(HEIGHT/3) and y<=100+(WIDTH/3))
-"""
+
 
 def isEmpty(squarenum):         #returns True if the square "squarenum" is empty and False if there is already an X or O there.
     return
@@ -34,9 +26,9 @@ def computerTurn():             #picks a random unused square and places the com
 
 
 def mouseClick(event):
-    if mouse.x <= (100+(WIDTH/3)):
+    if 100<= event.x <= (100+(WIDTH/3)) and 100<= event.y <=(100+(HEIGHT/3)):
         letters = TextAsset("X", fill=black, style='bold 100pt Times')
-        Sprite (letters,(event.x,event.y))
+        Sprite (letters,(100+(WIDTH/6),100+(HEIGHT/6))
 
 
 if __name__ == '__main__':
