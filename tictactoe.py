@@ -28,45 +28,45 @@ def computerTurn():             #picks a random unused square and places the com
     
     if horiz==1:                                        #decides for first column numbers
         
-        if vert == 1 and isEmpty(11)==True:
+        if vert == 1 and 11==True:
             Sprite (Os,(120,100))
-            return isEmpty(11)=False
+            return 11= False
             
-        elif vert == 2 and isEmpty(12)==True:
+        elif vert == 2 and 12==True:
             Sprite (Os,(120,230))
-            return isEmpty(12)=False
+            return 12=False
             
-        elif vert == 3 and isEmpty(12)==True:
+        elif vert == 3 and 13==True:
             Sprite (Os,(120,360))
-            return isEmpty(13)=False
+            return 13=False
             
     elif horiz == 2:                                    #decides for second column numbers
         
-        if vert == 1 and isEmpty(21)==True:
+        if vert == 1 and 21==True:
             Sprite (Os,(250,100))
-            return isEmpty(21)=False
+            return 21=False
             
-        elif vert == 2 and isEmpty(22)==True:
+        elif vert == 2 and 22==True:
             Sprite (Os,(250,230))
-            return isEmpty(22)=False
+            return 22=False
             
-        elif vert == 3 and isEmpty(23)==True:
+        elif vert == 3 and 23==True:
             Sprite (Os,(250,360))
-            return isEmpty(23)=False
+            return 23=False
             
     elif horiz == 3:                            #decides for third column numbers
         
-        if vert == 1 and isEmpty(31)==True:
+        if vert == 1 and 31==True:
             Sprite (Os,(380,100))
-            return isEmpty(31)=False
+            return 31=False
             
-        elif vert == 2 and isEmpty(32)==True:
+        elif vert == 2 and 32==True:
             Sprite (Os,(380,230))
-            return isEmpty(32)=False
+            return 32=False
             
-        elif vert == 3 and isEmpty(33)==True:
+        elif vert == 3 and 33==True:
             Sprite (Os,(380,360))
-            return isEmpty(33)=False
+            return 33=False
 
 
 def mouseClick(event):                   #responds to clicks; the player's turn
