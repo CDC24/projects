@@ -26,9 +26,6 @@ def computerTurn():             #picks a random unused square and places the com
     
     Os = TextAsset("O", fill=black, style='bold 100pt Times')
     
-    print (vert)
-    print (horiz)
-    
     if horiz==1:                                        #decides for first column numbers
         
         if vert == 1:
