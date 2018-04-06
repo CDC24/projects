@@ -9,7 +9,7 @@ from random import randint
 
 
 def isEmpty(squarenum):         #returns True if the square "squarenum" is empty and False if there is already an X or O there.
-    return isEmpty()=True
+    return isEmpty(squarenum)=True
 
 
 def winner():                   #returns True if someone won and False otherwise, but not who won
