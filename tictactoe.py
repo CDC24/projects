@@ -30,43 +30,43 @@ def computerTurn():             #picks a random unused square and places the com
         
         if vert == 1 and isEmpty(11)==True:
             Sprite (Os,(120,100))
-            isEmpty(11)=False
+            return isEmpty(11)=False
             
         elif vert == 2 and isEmpty(12)==True:
             Sprite (Os,(120,230))
-            isEmpty(12)=False
+            return isEmpty(12)=False
             
         elif vert == 3 and isEmpty(12)==True:
             Sprite (Os,(120,360))
-            isEmpty(13)=False
+            return isEmpty(13)=False
             
     elif horiz == 2:                                    #decides for second column numbers
         
         if vert == 1 and isEmpty(21)==True:
             Sprite (Os,(250,100))
-            isEmpty(21)=False
+            return isEmpty(21)=False
             
         elif vert == 2 and isEmpty(22)==True:
             Sprite (Os,(250,230))
-            isEmpty(22)=False
+            return isEmpty(22)=False
             
         elif vert == 3 and isEmpty(23)==True:
             Sprite (Os,(250,360))
-            isEmpty(23)=False
+            return isEmpty(23)=False
             
     elif horiz == 3:                            #decides for third column numbers
         
         if vert == 1 and isEmpty(31)==True:
             Sprite (Os,(380,100))
-            isEmpty(31)=False
+            return isEmpty(31)=False
             
         elif vert == 2 and isEmpty(32)==True:
             Sprite (Os,(380,230))
-            isEmpty(32)=False
+            return isEmpty(32)=False
             
         elif vert == 3 and isEmpty(33)==True:
             Sprite (Os,(380,360))
-            isEmpty(33)=False
+            return isEmpty(33)=False
 
 
 def mouseClick(event):                   #responds to clicks; the player's turn
