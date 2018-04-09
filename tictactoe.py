@@ -80,42 +80,51 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]==True:
             Sprite (Xs,(120,100))
+            data["square11"]= False
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]==True:
             Sprite (Xs,(120,230))
+            data["square12"]= False
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]==True:
             Sprite (Xs,(120,360))
+            data["square13"]= False
             computerTurn()
             
     elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
         
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]==True:
             Sprite (Xs,(250,100))
+            data["square21"]= False
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]==True:
             Sprite (Xs,(250,230))
+            data["square22"]= False
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]==True:
             Sprite (Xs,(250,360))
+            data["square23"]= False
             computerTurn()
             
     elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
         
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]==True:
             Sprite (Xs,(380,100))
+            data["square31"]= False
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]==True:
             Sprite (Xs,(380,230))
+            data["square32"]= False
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]==True:
             Sprite (Xs,(380,360))
+            data["square33"]= False
             computerTurn()
 
 
