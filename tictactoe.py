@@ -7,13 +7,13 @@ from ggame import *
 from random import randint
 
 
-
+"""
 def isEmpty(squarenum):         #returns True if the square "squarenum" is empty and False if there is already an X or O there.
     if data[squarenum] == True:
         return (isEmpty(squarenum) = True)
         else:
             return (isEmpty(squarenum) = False)
-
+"""
 
 def winner():                   #returns True if someone won and False otherwise, but not who won
     return
