@@ -34,54 +34,54 @@ def computerTurn():             #picks a random unused square and places the com
     
     if horiz==1:                                        #decides for first column numbers
         
-        if vert == 1 and data["square11"]==True:
+        if vert == 1 and data["square11"]=="":
             Sprite (Os,(120,100))
-            data["square11"]= False
+            data["square11"]= "o"
             piecePlaced=True
             
-        elif vert == 2 and data["square12"]==True:
+        elif vert == 2 and data["square12"]=="":
             Sprite (Os,(120,230))
-            data["square12"]=False
+            data["square12"]="o"
             piecePlaced=True
             
-        elif vert == 3 and data["square13"]==True:
+        elif vert == 3 and data["square13"]=="":
             Sprite (Os,(120,360))
-            data["square13"]=False
+            data["square13"]="o"
             piecePlaced=True
             
     elif horiz == 2:                                    #decides for second column numbers
         
-        if vert == 1 and data["square21"]==True:
+        if vert == 1 and data["square21"]=="":
             Sprite (Os,(250,100))
-            data["square21"]=False
+            data["square21"]="o"
             piecePlaced=True
             
-        elif vert == 2 and data["square22"]==True:
+        elif vert == 2 and data["square22"]=="":
             Sprite (Os,(250,230))
-            data["square22"]=False
+            data["square22"]="o"
             piecePlaced=True
             
-        elif vert == 3 and data["square23"]==True:
+        elif vert == 3 and data["square23"]=="":
             Sprite (Os,(250,360))
-            data["square23"]=False
+            data["square23"]="o"
             piecePlaced=True
             
     elif horiz == 3:                            #decides for third column numbers
         
-        if vert == 1 and data["square31"]==True:
+        if vert == 1 and data["square31"]=="":
             Sprite (Os,(380,100))
-            data["square31"]=False
+            data["square31"]="o"
             piecePlaced=True
             
             
-        elif vert == 2 and data["square32"]==True:
+        elif vert == 2 and data["square32"]=="":
             Sprite (Os,(380,230))
-            data["square32"]=False
+            data["square32"]="o"
             piecePlaced=True
             
-        elif vert == 3 and data["square33"]==True:
+        elif vert == 3 and data["square33"]=="":
             Sprite (Os,(380,360))
-            data["square33"]=False
+            data["square33"]="o"
             piecePlaced=True
             
     if piecePlaced==False: computerTurn()
@@ -93,53 +93,53 @@ def mouseClick(event):                   #responds to clicks; the player's turn
 
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
-        if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]==True:
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="":
             Sprite (Xs,(120,100))
-            data["square11"]= False
+            data["square11"]= "x"
             computerTurn()
             
-        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]==True:
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
             Sprite (Xs,(120,230))
-            data["square12"]= False
+            data["square12"]= "x"
             computerTurn()
             
-        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]==True:
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]=="":
             Sprite (Xs,(120,360))
-            data["square13"]= False
+            data["square13"]= "x"
             computerTurn()
             
     elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
         
-        if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]==True:
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]=="":
             Sprite (Xs,(250,100))
-            data["square21"]= False
+            data["square21"]= "x"
             computerTurn()
             
-        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]==True:
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]=="":
             Sprite (Xs,(250,230))
-            data["square22"]= False
+            data["square22"]= "x"
             computerTurn()
             
-        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]==True:
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]=="":
             Sprite (Xs,(250,360))
-            data["square23"]= False
+            data["square23"]= "x"
             computerTurn()
             
     elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
         
-        if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]==True:
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]=="":
             Sprite (Xs,(380,100))
-            data["square31"]= False
+            data["square31"]= "x"
             computerTurn()
             
-        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]==True:
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]=="":
             Sprite (Xs,(380,230))
-            data["square32"]= False
+            data["square32"]= "x"
             computerTurn()
             
-        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]==True:
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]=="":
             Sprite (Xs,(380,360))
-            data["square33"]= False
+            data["square33"]= "x"
             computerTurn()
 
 
@@ -147,15 +147,15 @@ if __name__ == '__main__':
 
 
     data = {}
-    data["square11"] = True
-    data["square12"] = True
-    data["square13"] = True
-    data["square21"] = True
-    data["square22"] = True
-    data["square23"] = True
-    data["square31"] = True
-    data["square32"] = True
-    data["square33"] = True
+    data["square11"] = ""
+    data["square12"] = ""
+    data["square13"] = ""
+    data["square21"] = ""
+    data["square22"] = ""
+    data["square23"] = ""
+    data["square31"] = ""
+    data["square32"] = ""
+    data["square33"] = ""
 
 
     #graphics
