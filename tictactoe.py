@@ -9,7 +9,10 @@ from random import randint
 
 
 def isEmpty(squarenum):         #returns True if the square "squarenum" is empty and False if there is already an X or O there.
-    return isEmpty(squarenum)=True
+    if data[squarenum] == True:
+        isEmpty(squarenum) = True
+        else:
+            isEmpty(squarenum) = False
 
 
 def winner():                   #returns True if someone won and False otherwise, but not who won
@@ -75,43 +78,43 @@ def mouseClick(event):                   #responds to clicks; the player's turn
 
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
-        if 100<= event.y <=(100+(HEIGHT/3)):
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]==True:
             Sprite (Xs,(120,100))
             computerTurn()
             
-        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]==True:
             Sprite (Xs,(120,230))
             computerTurn()
             
-        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]==True:
             Sprite (Xs,(120,360))
             computerTurn()
             
     elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
         
-        if 100<= event.y <=(100+(HEIGHT/3)):
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]==True:
             Sprite (Xs,(250,100))
             computerTurn()
             
-        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]==True:
             Sprite (Xs,(250,230))
             computerTurn()
             
-        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]==True:
             Sprite (Xs,(250,360))
             computerTurn()
             
     elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
         
-        if 100<= event.y <=(100+(HEIGHT/3)):
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]==True:
             Sprite (Xs,(380,100))
             computerTurn()
             
-        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)):
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]==True:
             Sprite (Xs,(380,230))
             computerTurn()
             
-        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT):
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]==True:
             Sprite (Xs,(380,360))
             computerTurn()
 
