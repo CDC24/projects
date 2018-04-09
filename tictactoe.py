@@ -24,6 +24,9 @@ def fullboard():                #returns True if every square is filled up with 
 
 
 def computerTurn():             #picks a random unused square and places the computer piece there.
+    
+    piecePlaced=False
+    
     horiz = randint(1,3)
     vert = randint(1,3)
     
@@ -34,61 +37,54 @@ def computerTurn():             #picks a random unused square and places the com
         if vert == 1 and data["square11"]==True:
             Sprite (Os,(120,100))
             data["square11"]= False
-        elif data["square11"]!=True:
-            computerTurn()
+            piecePlaced=True
             
         elif vert == 2 and data["square12"]==True:
             Sprite (Os,(120,230))
             data["square12"]=False
-        elif data["square12"]!=True:
-            computerTurn()
+            piecePlaced=True
             
         elif vert == 3 and data["square13"]==True:
             Sprite (Os,(120,360))
             data["square13"]=False
-        elif data["square13"]!=True:
-            computerTurn()
+            piecePlaced=True
             
     elif horiz == 2:                                    #decides for second column numbers
         
         if vert == 1 and data["square21"]==True:
             Sprite (Os,(250,100))
             data["square21"]=False
-        elif data["square21"]!=True:
-            computerTurn()
+            piecePlaced=True
             
         elif vert == 2 and data["square22"]==True:
             Sprite (Os,(250,230))
             data["square22"]=False
-        elif data["square22"]!=True:
-            computerTurn()
+            piecePlaced=True
             
         elif vert == 3 and data["square23"]==True:
             Sprite (Os,(250,360))
             data["square23"]=False
-        elif data["square23"]!=True:
-            computerTurn()
+            piecePlaced=True
             
     elif horiz == 3:                            #decides for third column numbers
         
         if vert == 1 and data["square31"]==True:
             Sprite (Os,(380,100))
             data["square31"]=False
-        elif data["square31"]!=True:
-            computerTurn()
+            piecePlaced=True
             
             
         elif vert == 2 and data["square32"]==True:
             Sprite (Os,(380,230))
             data["square32"]=False
-        elif data["square32"]!=True:
-            computerTurn()
+            piecePlaced=True
             
         elif vert == 3 and data["square33"]==True:
             Sprite (Os,(380,360))
             data["square33"]=False
-        elif data["square33"]!=True:
-            computerTurn()
+            piecePlaced=True
+            
+    if piecePlaced==False: computerTurn()
 
 
 def mouseClick(event):                   #responds to clicks; the player's turn
