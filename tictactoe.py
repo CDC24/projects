@@ -20,15 +20,15 @@ def winner():                   #returns True if someone won and False otherwise
 
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
-    if data["square11"] == "x"
-    if data["square12"] == "x"
-    if data["square13"] == "x"
-    if data["square21"] == "x"
-    if data["square22"] == "x"
-    if data["square23"] == "x"
-    if data["square31"] == "x"
-    if data["square32"] == "x"
-    if data["square33"] == "x"
+    if data["square11"] == "x" or data["square11"] == "O"
+    if data["square12"] == "x" or data["square12"] == "O"
+    if data["square13"] == "x" or data["square13"] == "O"
+    if data["square21"] == "x" or data["square21"] == "O"
+    if data["square22"] == "x" or data["square22"] == "O"
+    if data["square23"] == "x" or data["square23"] == "O"
+    if data["square31"] == "x" or data["square31"] == "O"
+    if data["square32"] == "x" or data["square32"] == "O"
+    if data["square33"] == "x" or data["square33"] == "O"
 
 
 def computerTurn():             #picks a random unused square and places the computer piece there.
