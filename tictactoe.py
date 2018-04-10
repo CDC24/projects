@@ -20,15 +20,16 @@ def winner():                   #returns True if someone won and False otherwise
 
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
-    if data["square11"] == "x" or data["square11"] == "O":
-        if data["square12"] == "x" or data["square12"] == "O":
-            if data["square13"] == "x" or data["square13"] == "O":
-                if data["square21"] == "x" or data["square21"] == "O":
-                    if data["square22"] == "x" or data["square22"] == "O":
-                        if data["square23"] == "x" or data["square23"] == "O":
-                            if data["square31"] == "x" or data["square31"] == "O":
-                                if data["square32"] == "x" or data["square32"] == "O":
-                                    if data["square33"] == "x" or data["square33"] == "O":
+    print(fullboard())
+    if data["square11"] == "x" or data["square11"] == "o":
+        if data["square12"] == "x" or data["square12"] == "o":
+            if data["square13"] == "x" or data["square13"] == "o":
+                if data["square21"] == "x" or data["square21"] == "o":
+                    if data["square22"] == "x" or data["square22"] == "o":
+                        if data["square23"] == "x" or data["square23"] == "o":
+                            if data["square31"] == "x" or data["square31"] == "o":
+                                if data["square32"] == "x" or data["square32"] == "o":
+                                    if data["square33"] == "x" or data["square33"] == "o":
                                         return (True)
     return (False)
 
