@@ -20,15 +20,17 @@ def winner():                   #returns True if someone won and False otherwise
 
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
-    if data["square11"] == "x" or data["square11"] == "O"
-    if data["square12"] == "x" or data["square12"] == "O"
-    if data["square13"] == "x" or data["square13"] == "O"
-    if data["square21"] == "x" or data["square21"] == "O"
-    if data["square22"] == "x" or data["square22"] == "O"
-    if data["square23"] == "x" or data["square23"] == "O"
-    if data["square31"] == "x" or data["square31"] == "O"
-    if data["square32"] == "x" or data["square32"] == "O"
-    if data["square33"] == "x" or data["square33"] == "O"
+    if data["square11"] == "x" or data["square11"] == "O":
+        if data["square12"] == "x" or data["square12"] == "O":
+            if data["square13"] == "x" or data["square13"] == "O":
+                if data["square21"] == "x" or data["square21"] == "O":
+                    if data["square22"] == "x" or data["square22"] == "O":
+                        if data["square23"] == "x" or data["square23"] == "O":
+                            if data["square31"] == "x" or data["square31"] == "O":
+                                if data["square32"] == "x" or data["square32"] == "O":
+                                    if data["square33"] == "x" or data["square33"] == "O":
+                                        return (True)
+    return (False)
 
 
 def computerTurn():             #picks a random unused square and places the computer piece there.
@@ -40,7 +42,7 @@ def computerTurn():             #picks a random unused square and places the com
     
     Os = TextAsset("O", fill=black, style='bold 100pt Times')
     
-    if horiz==1:                                        #decides for first column numbers
+    if horiz==1 and fullboard()==False:                                        #decides for first column numbers
         
         if vert == 1 and data["square11"]=="":
             Sprite (Os,(120,100))
@@ -57,7 +59,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square13"]="o"
             piecePlaced=True
             
-    elif horiz == 2:                                    #decides for second column numbers
+    elif horiz == 2 and fullboard()==False:                                    #decides for second column numbers
         
         if vert == 1 and data["square21"]=="":
             Sprite (Os,(250,100))
@@ -74,7 +76,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square23"]="o"
             piecePlaced=True
             
-    elif horiz == 3:                            #decides for third column numbers
+    elif horiz == 3 and fullboard()==False:                            #decides for third column numbers
         
         if vert == 1 and data["square31"]=="":
             Sprite (Os,(380,100))
