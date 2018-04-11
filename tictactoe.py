@@ -167,7 +167,7 @@ if __name__ == '__main__':
     
     black = Color(0x000000,1)
     red = Color(0xFF0000,1)
-    yellow = Color(0xFFFF00,1)
+    yellow = Color(0xFFFF00,0.25)
     
     #setting up board
     
@@ -181,11 +181,11 @@ if __name__ == '__main__':
     
     
     # these sprite the grid
+    Sprite(boardBox,(100,100))
     Sprite(horizBoardLine,(100,100+(HEIGHT/3)))
     Sprite(horizBoardLine,(100,100+(2*HEIGHT/3)))
     Sprite(vertBoardLine,(100+(WIDTH/3),100))
     Sprite(vertBoardLine,(100+(2*WIDTH/3),100))
-    Sprite(boardBox,(100,100))
     
     
     
