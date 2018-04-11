@@ -19,7 +19,7 @@ def winner():                   #returns True if someone won and False otherwise
     red = Color(0xFF0000,1)
     youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
     if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x":
-        Sprite (youWin(50,50))
+        return youWin = True
 
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
