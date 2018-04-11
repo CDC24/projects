@@ -9,10 +9,10 @@ from random import randint
 
 """
 def isEmpty(squarenum):         #returns True if the square "squarenum" is empty and False if there is already an X or O there.
-    if data[squarenum] == True:
-        return (isEmpty(squarenum) = True)
+    if data[squarenum] == "":
+        return (True)
         else:
-            return (isEmpty(squarenum) = False)
+            return (False)
 """
 
 def winner():                   #returns True if someone won and False otherwise, but not who won
@@ -25,7 +25,7 @@ def fullboard():                #returns True if every square is filled up with 
         return (False)
     else:
         return(True)
-    
+
 
 
 def computerTurn():             #picks a random unused square and places the computer piece there.
@@ -37,7 +37,7 @@ def computerTurn():             #picks a random unused square and places the com
     
     Os = TextAsset("O", fill=black, style='bold 100pt Times')
     
-    if horiz==1 and fullboard()==False:                                        #decides for first column numbers
+    if horiz==1:                                        #decides for first column numbers
         
         if vert == 1 and data["square11"]=="":
             Sprite (Os,(120,100))
@@ -54,7 +54,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square13"]="o"
             piecePlaced=True
             
-    elif horiz == 2 and fullboard()==False:                                    #decides for second column numbers
+    elif horiz == 2:                                    #decides for second column numbers
         
         if vert == 1 and data["square21"]=="":
             Sprite (Os,(250,100))
@@ -71,7 +71,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square23"]="o"
             piecePlaced=True
             
-    elif horiz == 3 and fullboard()==False:                            #decides for third column numbers
+    elif horiz == 3:                            #decides for third column numbers
         
         if vert == 1 and data["square31"]=="":
             Sprite (Os,(380,100))
@@ -167,6 +167,7 @@ if __name__ == '__main__':
     
     black = Color(0x000000,1)
     red = Color(0xFF0000,1)
+    yellow = Color(0xFFFF00,1)
     
     #setting up board
     
@@ -175,6 +176,7 @@ if __name__ == '__main__':
     
     vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(1,black),black)
     horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(1,black),black)
+    boardBox = RectangleAsset(WIDTH,HEIGHT,LineStyle(1,yellow),yellow)
     
     
     
@@ -183,6 +185,7 @@ if __name__ == '__main__':
     Sprite(horizBoardLine,(100,100+(2*HEIGHT/3)))
     Sprite(vertBoardLine,(100+(WIDTH/3),100))
     Sprite(vertBoardLine,(100+(2*WIDTH/3),100))
+    Sprite(boardBox,(100,100))
     
     
     
