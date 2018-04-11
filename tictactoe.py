@@ -15,8 +15,10 @@ def isEmpty(squarenum):         #returns True if the square "squarenum" is empty
             return (False)
 """
 
-def winner():                   #returns True if someone won and False otherwise, but not who won
-    return
+def winner?():                   #returns True if someone won and False otherwise, but not who won
+    youWin = TextAsset("Surprisingly, You Win!!", fill=black, style='bold 50pt Times')
+    if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x":
+        Sprite (youWin(50,50))
 
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
@@ -101,16 +103,19 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="":
             Sprite (Xs,(120,100))
             data["square11"]= "x"
+            winner?()
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
             Sprite (Xs,(120,230))
             data["square12"]= "x"
+            winner?()
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]=="":
             Sprite (Xs,(120,360))
             data["square13"]= "x"
+            winner?()
             computerTurn()
             
     elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
