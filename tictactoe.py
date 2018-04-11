@@ -37,7 +37,7 @@ def computerTurn():             #picks a random unused square and places the com
     
     Os = TextAsset("O", fill=black, style='bold 100pt Times')
     
-    if horiz==1:                                        #decides for first column numbers
+    if horiz==1 and fullboard() != True:                                        #decides for first column numbers
         
         if vert == 1 and data["square11"]=="":
             Sprite (Os,(120,100))
