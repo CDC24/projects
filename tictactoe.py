@@ -144,7 +144,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
     tiegame = TextAsset("It's a tie game, my dude!", fill=red, style='bold 50pt Times')
     youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
 
-#Actions on click
+#Actions on click and turn completion
     
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
@@ -247,7 +247,7 @@ if __name__ == '__main__':
 
 
     data = {}
-    data["square11"] = ""
+    data["square11"] = ""     #used for determining empty squares and win combos
     data["square12"] = ""
     data["square13"] = ""
     data["square21"] = ""
@@ -257,7 +257,7 @@ if __name__ == '__main__':
     data["square32"] = ""
     data["square33"] = ""
 
-    data["gameover"] = False
+    data["gameover"] = False   #for stopping game after a win
 
     #graphics
     
