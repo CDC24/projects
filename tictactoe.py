@@ -109,7 +109,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             if winner():
                 print ("Surprisingy, you win!")
             elif fullboard():
-                Sprite(tiegame(50,50))
+                Sprite(tiegame,(50,50))
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
