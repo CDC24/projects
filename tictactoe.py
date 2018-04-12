@@ -19,11 +19,12 @@ def winner():                   #returns True if someone won and False otherwise
     red = Color(0xFF0000,1)
     youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
     if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x":
-        return youWin = True
+        return (True)
+    else:
+        return (False)
 
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
-    print(fullboard())
     if data["square11"] == "" or  data["square12"] == "" or data["square13"] == "" or data["square21"] == "" or data["square22"] == "" or data["square23"] == "" or data["square31"] == "" or data["square32"] == "" or data["square33"] == "":
         return (False)
     else:
@@ -40,7 +41,7 @@ def computerTurn():             #picks a random unused square and places the com
     
     Os = TextAsset("O", fill=black, style='bold 100pt Times')
     
-    if horiz==1 and fullboard() != True:                                        #decides for first column numbers
+    if horiz == 1:                                        #decides for first column numbers
         
         if vert == 1 and data["square11"]=="":
             Sprite (Os,(120,100))
@@ -104,7 +105,10 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="":
             Sprite (Xs,(120,100))
             data["square11"]= "x"
-            winner()
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
