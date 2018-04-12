@@ -73,7 +73,10 @@ elif data["playerturn"] == ("playerO"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
-            data["playerturn"] *= -1
+            if turn==("x"):
+                data["playerturn"] = ("playerO")
+            elif turn==("o"):
+                data["playerturn"] = ("playerX")
                 
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
             Sprite (theLetter,(120,230))
