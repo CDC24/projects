@@ -117,7 +117,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(120,230))
             data["square12"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
@@ -126,7 +126,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(120,360))
             data["square13"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
@@ -137,7 +137,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(250,100))
             data["square21"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
@@ -146,7 +146,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(250,230))
             data["square22"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
@@ -155,7 +155,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(250,360))
             data["square23"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
@@ -166,7 +166,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(380,100))
             data["square31"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
@@ -175,7 +175,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(380,230))
             data["square32"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
@@ -184,7 +184,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             Sprite (Xs,(380,360))
             data["square33"]= "x"
             if winner():
-                print ("Surprisingy, you win!")
+                Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
             computerTurn()
