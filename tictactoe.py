@@ -114,13 +114,19 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
             Sprite (Xs,(120,230))
             data["square12"]= "x"
-            winner()
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]=="":
             Sprite (Xs,(120,360))
             data["square13"]= "x"
-            winner()
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
     elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
@@ -128,16 +134,28 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]=="":
             Sprite (Xs,(250,100))
             data["square21"]= "x"
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]=="":
             Sprite (Xs,(250,230))
             data["square22"]= "x"
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]=="":
             Sprite (Xs,(250,360))
             data["square23"]= "x"
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
     elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
@@ -145,16 +163,28 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]=="":
             Sprite (Xs,(380,100))
             data["square31"]= "x"
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]=="":
             Sprite (Xs,(380,230))
             data["square32"]= "x"
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]=="":
             Sprite (Xs,(380,360))
             data["square33"]= "x"
+            if winner():
+                print ("Surprisingy, you win!")
+            elif fullboard():
+                print ("It's a tie game, my dude!")
             computerTurn()
 
 
