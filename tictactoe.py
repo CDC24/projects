@@ -189,59 +189,59 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             elif fullboard():
                 Sprite(tiegame,(600,100))
             else:                                       #STOPPED HERE
-                    computerTurn()
-                
-            elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]=="":
-                Sprite (Xs,(250,230))
-                data["square22"]= "x"
-                if winner("x"):
-                    Sprite(youWin,(600,100))
-                elif fullboard():
-                    Sprite(tiegame,(600,100))
-                else:
-                    computerTurn()
-                
-            elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]=="":
-                Sprite (Xs,(250,360))
-                data["square23"]= "x"
-                if winner("x"):
-                    Sprite(youWin,(600,100))
-                elif fullboard():
-                    Sprite(tiegame,(600,100))
-                else:
-                    computerTurn()
-                
-        elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
+                computerTurn()
             
-            if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]=="":
-                Sprite (Xs,(380,100))
-                data["square31"]= "x"
-                if winner("x"):
-                    Sprite(youWin,(600,100))
-                elif fullboard():
-                    Sprite(tiegame,(600,100))
-                else:
-                    computerTurn()
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]=="":
+            Sprite (Xs,(250,230))
+            data["square22"]= "x"
+            if winner("x"):
+                Sprite(youWin,(600,100))
+            elif fullboard():
+                Sprite(tiegame,(600,100))
+            else:
+                computerTurn()
                 
-            elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]=="":
-                Sprite (Xs,(380,230))
-                data["square32"]= "x"
-                if winner("x"):
-                    Sprite(youWin,(600,100))
-                elif fullboard():
-                    Sprite(tiegame,(600,100))
-                else:
-                    computerTurn()
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]=="":
+            Sprite (Xs,(250,360))
+            data["square23"]= "x"
+            if winner("x"):
+                Sprite(youWin,(600,100))
+            elif fullboard():
+                Sprite(tiegame,(600,100))
+            else:
+                computerTurn()
                 
-            elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]=="":
-                Sprite (Xs,(380,360))
-                data["square33"]= "x"
-                if winner("x"):
-                    Sprite(youWin,(600,100))
-                elif fullboard():
-                    Sprite(tiegame,(600,100))
-                else:
-                    computerTurn()
+    elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
+            
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]=="":
+            Sprite (Xs,(380,100))
+            data["square31"]= "x"
+            if winner("x"):
+                Sprite(youWin,(600,100))
+            elif fullboard():
+                Sprite(tiegame,(600,100))
+            else:
+                computerTurn()
+                
+        elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]=="":
+            Sprite (Xs,(380,230))
+            data["square32"]= "x"
+            if winner("x"):
+                Sprite(youWin,(600,100))
+            elif fullboard():
+                Sprite(tiegame,(600,100))
+            else:
+                computerTurn()
+                
+        elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]=="":
+            Sprite (Xs,(380,360))
+            data["square33"]= "x"
+            if winner("x"):
+                Sprite(youWin,(600,100))
+            elif fullboard():
+                Sprite(tiegame,(600,100))
+            else:
+                computerTurn()
 
 
 if __name__ == '__main__':
