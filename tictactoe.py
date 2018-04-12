@@ -15,6 +15,27 @@ def isEmpty(squarenum):         #returns True if the square "squarenum" is empty
             return (False)
 """
 
+
+def winner(lett):                   #returns True if the requested letter won and False otherwise
+    if data["square11"] == lett and  data["square12"] == lett and data["square13"] == lett: #checks vertical combos
+        return (True)
+    if data["square21"] == lett and  data["square22"] == lett and data["square23"] == lett:
+        return (True)
+    if data["square31"] == lett and  data["square32"] == lett and data["square33"] == lett:
+        return (True)
+    if data["square11"] == lett and  data["square21"] == lett and data["square31"] == lett: #checks horizontal combos
+        return (True)
+    if data["square12"] == lett and  data["square22"] == lett and data["square32"] == lett:
+        return (True)
+    if data["square13"] == lett and  data["square23"] == lett and data["square33"] == lett:
+        return (True)
+    if data["square11"] == lett and  data["square22"] == lett and data["square33"] == lett: #checks diagonal combos
+        return (True)
+    if data["square31"] == lett and  data["square22"] == lett and data["square13"] == lett:
+        return (True)
+    else:
+        return (False)
+'''
 def winner():                   #returns True if player won and False otherwise
     if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x": #checks vertical combos
         return (True)
@@ -55,7 +76,7 @@ def loser():                   #returns True if computer won and False otherwise
         return (True)
     else:
         return (False)
-
+'''
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
     if data["square11"] == "" or  data["square12"] == "" or data["square13"] == "" or data["square21"] == "" or data["square22"] == "" or data["square23"] == "" or data["square31"] == "" or data["square32"] == "" or data["square33"] == "":
@@ -81,21 +102,21 @@ def computerTurn():             #picks a random unused square and places the com
         if vert == 1 and data["square11"]=="":
             Sprite (Os,(120,100))
             data["square11"]= "o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 2 and data["square12"]=="":
             Sprite (Os,(120,230))
             data["square12"]="o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 3 and data["square13"]=="":
             Sprite (Os,(120,360))
             data["square13"]="o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
@@ -104,21 +125,21 @@ def computerTurn():             #picks a random unused square and places the com
         if vert == 1 and data["square21"]=="":
             Sprite (Os,(250,100))
             data["square21"]="o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 2 and data["square22"]=="":
             Sprite (Os,(250,230))
             data["square22"]="o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 3 and data["square23"]=="":
             Sprite (Os,(250,360))
             data["square23"]="o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
@@ -127,7 +148,7 @@ def computerTurn():             #picks a random unused square and places the com
         if vert == 1 and data["square31"]=="":
             Sprite (Os,(380,100))
             data["square31"]="o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
@@ -135,12 +156,14 @@ def computerTurn():             #picks a random unused square and places the com
         elif vert == 2 and data["square32"]=="":
             Sprite (Os,(380,230))
             data["square32"]="o"
+            if winner("o"):
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 3 and data["square33"]=="":
             Sprite (Os,(380,360))
             data["square33"]="o"
-            if loser():
+            if winner("o"):
                 Sprite(youLose,(600,100))
             piecePlaced=True
             
@@ -160,7 +183,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="":
             Sprite (Xs,(120,100))
             data["square11"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -169,7 +192,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
             Sprite (Xs,(120,230))
             data["square12"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -178,7 +201,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]=="":
             Sprite (Xs,(120,360))
             data["square13"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -189,7 +212,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]=="":
             Sprite (Xs,(250,100))
             data["square21"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -198,7 +221,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]=="":
             Sprite (Xs,(250,230))
             data["square22"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -207,7 +230,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]=="":
             Sprite (Xs,(250,360))
             data["square23"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -218,7 +241,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]=="":
             Sprite (Xs,(380,100))
             data["square31"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -227,7 +250,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]=="":
             Sprite (Xs,(380,230))
             data["square32"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
@@ -236,7 +259,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]=="":
             Sprite (Xs,(380,360))
             data["square33"]= "x"
-            if winner():
+            if winner("x"):
                 Sprite(youWin,(600,100))
             elif fullboard():
                 Sprite(tiegame,(600,100))
