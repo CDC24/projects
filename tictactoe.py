@@ -16,8 +16,6 @@ def isEmpty(squarenum):         #returns True if the square "squarenum" is empty
 """
 
 def winner():                   #returns True if someone won and False otherwise, but not who won
-    red = Color(0xFF0000,1)
-    youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
     if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x":
         return (True)
     else:
@@ -98,6 +96,8 @@ def computerTurn():             #picks a random unused square and places the com
 
 def mouseClick(event):                   #responds to clicks; the player's turn
 
+
+    red = Color(0xFF0000,1)
     Xs = TextAsset("X", fill=black, style='bold 100pt Times')
     tiegame = TextAsset("It's a tie game, my dude!", fill=red, style='bold 50pt Times')
     youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
