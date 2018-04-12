@@ -57,10 +57,10 @@ def mouseClick(event):                   #responds to clicks; the player's turn
 
 #Actions on click and turn completion
 
-if data["playerturn"] == (1):
+if data["playerturn"] == ("playerX"):
     turn = ("x")
     theLetter = Xs
-elif data["playerturn"] == (-1):
+elif data["playerturn"] == ("playerO"):
     turn = ("o")
     theLetter = Os
     
@@ -176,8 +176,9 @@ if __name__ == '__main__':
 
     data["gameover"] = False   #for stopping game after a win
     
-    data["playerturn"] = (1)
-
+    data["playerturn"] = ("playerX")
+    
+    
     #graphics
     
     black = Color(0x000000,1)
