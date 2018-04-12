@@ -15,7 +15,7 @@ def isEmpty(squarenum):         #returns True if the square "squarenum" is empty
             return (False)
 """
 
-def winner():                   #returns True if someone won and False otherwise, but not who won
+def winner():                   #returns True if player won and False otherwise
     if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x": #checks vertical combos
         return (True)
     if data["square21"] == "x" and  data["square22"] == "x" and data["square23"] == "x":
@@ -31,6 +31,27 @@ def winner():                   #returns True if someone won and False otherwise
     if data["square11"] == "x" and  data["square22"] == "x" and data["square33"] == "x": #checks diagonal combos
         return (True)
     if data["square31"] == "x" and  data["square22"] == "x" and data["square13"] == "x":
+        return (True)
+    else:
+        return (False)
+        
+        
+def loser():                   #returns True if computer won and False otherwise
+    if data["square11"] == "o" and  data["square12"] == "o" and data["square13"] == "o": #checks vertical combos
+        return (True)
+    if data["square21"] == "o" and  data["square22"] == "o" and data["square23"] == "o":
+        return (True)
+    if data["square31"] == "o" and  data["square32"] == "o" and data["square33"] == "o":
+        return (True)
+    if data["square11"] == "o" and  data["square21"] == "o" and data["square31"] == "o": #checks horizontal combos
+        return (True)
+    if data["square12"] == "o" and  data["square22"] == "o" and data["square32"] == "o":
+        return (True)
+    if data["square13"] == "o" and  data["square23"] == "o" and data["square33"] == "o":
+        return (True)
+    if data["square11"] == "o" and  data["square22"] == "o" and data["square33"] == "o": #checks diagonal combos
+        return (True)
+    if data["square31"] == "o" and  data["square22"] == "o" and data["square13"] == "o":
         return (True)
     else:
         return (False)
@@ -51,6 +72,8 @@ def computerTurn():             #picks a random unused square and places the com
     horiz = randint(1,3)
     vert = randint(1,3)
     
+    red = Color(0xFF0000,1)
+    youLose = TextAsset("You lost a game of TIC TAC TOE and your opponent was just guessing! Sheesh.", fill=red, style='bold 25pt Times')
     Os = TextAsset("O", fill=black, style='bold 100pt Times')
     
     if horiz == 1:                                        #decides for first column numbers
@@ -58,6 +81,8 @@ def computerTurn():             #picks a random unused square and places the com
         if vert == 1 and data["square11"]=="":
             Sprite (Os,(120,100))
             data["square11"]= "o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 2 and data["square12"]=="":
