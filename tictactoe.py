@@ -16,7 +16,21 @@ def isEmpty(squarenum):         #returns True if the square "squarenum" is empty
 """
 
 def winner():                   #returns True if someone won and False otherwise, but not who won
-    if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x":
+    if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x": #checks vertical combos
+        return (True)
+    if data["square21"] == "x" and  data["square22"] == "x" and data["square23"] == "x":
+        return (True)
+    if data["square31"] == "x" and  data["square32"] == "x" and data["square33"] == "x":
+        return (True)
+    if data["square11"] == "x" and  data["square21"] == "x" and data["square31"] == "x": #checks horizontal combos
+        return (True)
+    if data["square12"] == "x" and  data["square22"] == "x" and data["square32"] == "x":
+        return (True)
+    if data["square13"] == "x" and  data["square23"] == "x" and data["square33"] == "x":
+        return (True)
+    if data["square11"] == "x" and  data["square22"] == "x" and data["square33"] == "x": #checks diagonal combos
+        return (True)
+    if data["square31"] == "x" and  data["square22"] == "x" and data["square13"] == "x":
         return (True)
     else:
         return (False)
