@@ -56,13 +56,13 @@ def mouseClick(event):                   #responds to clicks; the player's turn
         youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
     
     #Actions on click and turn completion
-    
-    if data["playerturn"] == ("playerX"):
-        turn = ("x")
-        theLetter = Xs
-    elif data["playerturn"] == ("playerO"):
-        turn = ("o")
-        theLetter = Os
+       
+if data["playerturn"] == ("playerX"):
+    turn = ("x")
+    theLetter = Xs
+elif data["playerturn"] == ("playerO"):
+    turn = ("o")
+    theLetter = Os
     
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
