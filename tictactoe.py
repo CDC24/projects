@@ -43,7 +43,7 @@ def fullboard():                #returns True if every square is filled up with 
         return(True)
 
 
-
+'''
 def computerTurn():             #picks a random unused square and places the computer piece there.
     
     piecePlaced=False
@@ -106,7 +106,7 @@ def computerTurn():             #picks a random unused square and places the com
             piecePlaced=True
             
     if piecePlaced==False: computerTurn()
-
+'''
 
 def mouseClick(event):                   #responds to clicks; the player's turn
 
