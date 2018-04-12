@@ -35,48 +35,7 @@ def winner(lett):                   #returns True if the requested letter won an
         return (True)
     else:
         return (False)
-'''
-def winner():                   #returns True if player won and False otherwise
-    if data["square11"] == "x" and  data["square12"] == "x" and data["square13"] == "x": #checks vertical combos
-        return (True)
-    if data["square21"] == "x" and  data["square22"] == "x" and data["square23"] == "x":
-        return (True)
-    if data["square31"] == "x" and  data["square32"] == "x" and data["square33"] == "x":
-        return (True)
-    if data["square11"] == "x" and  data["square21"] == "x" and data["square31"] == "x": #checks horizontal combos
-        return (True)
-    if data["square12"] == "x" and  data["square22"] == "x" and data["square32"] == "x":
-        return (True)
-    if data["square13"] == "x" and  data["square23"] == "x" and data["square33"] == "x":
-        return (True)
-    if data["square11"] == "x" and  data["square22"] == "x" and data["square33"] == "x": #checks diagonal combos
-        return (True)
-    if data["square31"] == "x" and  data["square22"] == "x" and data["square13"] == "x":
-        return (True)
-    else:
-        return (False)
-        
-        
-def loser():                   #returns True if computer won and False otherwise
-    if data["square11"] == "o" and  data["square12"] == "o" and data["square13"] == "o": #checks vertical combos
-        return (True)
-    if data["square21"] == "o" and  data["square22"] == "o" and data["square23"] == "o":
-        return (True)
-    if data["square31"] == "o" and  data["square32"] == "o" and data["square33"] == "o":
-        return (True)
-    if data["square11"] == "o" and  data["square21"] == "o" and data["square31"] == "o": #checks horizontal combos
-        return (True)
-    if data["square12"] == "o" and  data["square22"] == "o" and data["square32"] == "o":
-        return (True)
-    if data["square13"] == "o" and  data["square23"] == "o" and data["square33"] == "o":
-        return (True)
-    if data["square11"] == "o" and  data["square22"] == "o" and data["square33"] == "o": #checks diagonal combos
-        return (True)
-    if data["square31"] == "o" and  data["square22"] == "o" and data["square13"] == "o":
-        return (True)
-    else:
-        return (False)
-'''
+
 
 def fullboard():                #returns True if every square is filled up with an X or O and False otherwise.
     if data["square11"] == "" or  data["square12"] == "" or data["square13"] == "" or data["square21"] == "" or data["square22"] == "" or data["square23"] == "" or data["square31"] == "" or data["square32"] == "" or data["square33"] == "":
