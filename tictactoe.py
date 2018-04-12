@@ -148,7 +148,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
     
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
-        if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="" and data["gameover"] = False:
+        if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="":
             Sprite (Xs,(120,100))
             data["square11"]= "x"
             if winner("x"):
