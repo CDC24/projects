@@ -148,7 +148,7 @@ if data["playerturn"] == ("playerX"):
                 computerTurn()
                 
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]=="":
-            Sprite (Xs,(380,360))
+            Sprite (theLetter,(380,360))
             data["square33"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
