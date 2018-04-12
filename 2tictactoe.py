@@ -47,22 +47,22 @@ def fullboard():                #returns True if every square is filled up with 
 def mouseClick(event):                   #responds to clicks; the player's turn
 
 
-# Establishes text sprites
-
-    red = Color(0xFF0000,1)
-    Xs = TextAsset("X", fill=black, style='bold 100pt Times')
-    Os = TextAsset("O", fill=black, style='bold 100pt Times')
-    tiegame = TextAsset("It's a tie game, my dude!", fill=red, style='bold 50pt Times')
-    youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
-
-#Actions on click and turn completion
-
-if data["playerturn"] == ("playerX"):
-    turn = ("x")
-    theLetter = Xs
-elif data["playerturn"] == ("playerO"):
-    turn = ("o")
-    theLetter = Os
+    # Establishes text sprites
+    
+        red = Color(0xFF0000,1)
+        Xs = TextAsset("X", fill=black, style='bold 100pt Times')
+        Os = TextAsset("O", fill=black, style='bold 100pt Times')
+        tiegame = TextAsset("It's a tie game, my dude!", fill=red, style='bold 50pt Times')
+        youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
+    
+    #Actions on click and turn completion
+    
+    if data["playerturn"] == ("playerX"):
+        turn = ("x")
+        theLetter = Xs
+    elif data["playerturn"] == ("playerO"):
+        turn = ("o")
+        theLetter = Os
     
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
