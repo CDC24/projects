@@ -88,11 +88,15 @@ def computerTurn():             #picks a random unused square and places the com
         elif vert == 2 and data["square12"]=="":
             Sprite (Os,(120,230))
             data["square12"]="o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 3 and data["square13"]=="":
             Sprite (Os,(120,360))
             data["square13"]="o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
     elif horiz == 2:                                    #decides for second column numbers
@@ -100,16 +104,22 @@ def computerTurn():             #picks a random unused square and places the com
         if vert == 1 and data["square21"]=="":
             Sprite (Os,(250,100))
             data["square21"]="o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 2 and data["square22"]=="":
             Sprite (Os,(250,230))
             data["square22"]="o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
         elif vert == 3 and data["square23"]=="":
             Sprite (Os,(250,360))
             data["square23"]="o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
     elif horiz == 3:                            #decides for third column numbers
@@ -117,6 +127,8 @@ def computerTurn():             #picks a random unused square and places the com
         if vert == 1 and data["square31"]=="":
             Sprite (Os,(380,100))
             data["square31"]="o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
             
@@ -128,6 +140,8 @@ def computerTurn():             #picks a random unused square and places the com
         elif vert == 3 and data["square33"]=="":
             Sprite (Os,(380,360))
             data["square33"]="o"
+            if loser():
+                Sprite(youLose,(600,100))
             piecePlaced=True
             
     if piecePlaced==False: computerTurn()
