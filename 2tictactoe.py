@@ -44,96 +44,6 @@ def fullboard():                #returns True if every square is filled up with 
         return(True)
 
 
-
-def computerTurn():             #picks a random unused square and places the computer piece there.
-    
-    piecePlaced=False #used to re-run the function if no open square found
-    
-    horiz = randint(1,3)  #Random numbers for picking squares
-    vert = randint(1,3)
-
-# Establishes text sprites
-
-    red = Color(0xFF0000,1)
-    youLose = TextAsset("You lost a game of TIC TAC TOE and your opponent was just guessing! Sheesh.", fill=red, style='bold 25pt Times')
-    Os = TextAsset("O", fill=black, style='bold 100pt Times')
-    
-    
-# Picking squares using random numbers and completing move
-    
-    if horiz == 1:                                        #decides for first column numbers
-        
-        if vert == 1 and data["square11"]=="":
-            Sprite (Os,(120,100))
-            data["square11"]= "o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-        elif vert == 2 and data["square12"]=="":
-            Sprite (Os,(120,230))
-            data["square12"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-        elif vert == 3 and data["square13"]=="":
-            Sprite (Os,(120,360))
-            data["square13"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-    elif horiz == 2:                                    #decides for second column numbers
-        
-        if vert == 1 and data["square21"]=="":
-            Sprite (Os,(250,100))
-            data["square21"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-        elif vert == 2 and data["square22"]=="":
-            Sprite (Os,(250,230))
-            data["square22"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-        elif vert == 3 and data["square23"]=="":
-            Sprite (Os,(250,360))
-            data["square23"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-    elif horiz == 3:                            #decides for third column numbers
-        
-        if vert == 1 and data["square31"]=="":
-            Sprite (Os,(380,100))
-            data["square31"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-            
-        elif vert == 2 and data["square32"]=="":
-            Sprite (Os,(380,230))
-            data["square32"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-        elif vert == 3 and data["square33"]=="":
-            Sprite (Os,(380,360))
-            data["square33"]="o"
-            if winner("o"):
-                Sprite(youLose,(600,100))
-            piecePlaced=True
-            
-    if piecePlaced==False: computerTurn()
-
-
 def mouseClick(event):                   #responds to clicks; the player's turn
 
 
@@ -141,15 +51,20 @@ def mouseClick(event):                   #responds to clicks; the player's turn
 
     red = Color(0xFF0000,1)
     Xs = TextAsset("X", fill=black, style='bold 100pt Times')
+    Os = TextAsset("O", fill=black, style='bold 100pt Times')
     tiegame = TextAsset("It's a tie game, my dude!", fill=red, style='bold 50pt Times')
     youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
 
 #Actions on click and turn completion
+
+if data["playerturn"] == ("playerX"):
+    turn = ("x")
+    theLetter = Xs
     
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="":
-            Sprite (Xs,(120,100))
+            Sprite (theLetter,(120,100))
             data["square11"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -159,7 +74,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
                 computerTurn()
                 
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
-            Sprite (Xs,(120,230))
+            Sprite (theLetter,(120,230))
             data["square12"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -169,7 +84,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
                 computerTurn()
             
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]=="":
-            Sprite (Xs,(120,360))
+            Sprite (theLetter,(120,360))
             data["square13"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -181,7 +96,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
     elif (100+(WIDTH/3))<= event.x <= (100+(2*WIDTH/3)):                        #checks for second column click
             
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]=="":
-            Sprite (Xs,(250,100))
+            Sprite (theLetter,(250,100))
             data["square21"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -191,7 +106,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
                 computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]=="":
-            Sprite (Xs,(250,230))
+            Sprite (theLetter,(250,230))
             data["square22"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -201,7 +116,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
                 computerTurn()
                 
         elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]=="":
-            Sprite (Xs,(250,360))
+            Sprite (theLetter,(250,360))
             data["square23"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -213,7 +128,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
     elif (100+(2*WIDTH/3))<= event.x <= (100+WIDTH):                            #checks for third column click
             
         if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]=="":
-            Sprite (Xs,(380,100))
+            Sprite (theLetter,(380,100))
             data["square31"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -223,7 +138,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
                 computerTurn()
                 
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]=="":
-            Sprite (Xs,(380,230))
+            Sprite (theLetter,(380,230))
             data["square32"]= "x"
             if winner("x"):
                 Sprite(youWin,(600,100))
@@ -258,6 +173,8 @@ if __name__ == '__main__':
     data["square33"] = ""
 
     data["gameover"] = False   #for stopping game after a win
+    
+    data["playerturn"] = ("playerX")
 
     #graphics
     
