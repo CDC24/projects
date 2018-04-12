@@ -7,14 +7,6 @@ from ggame import *
 from random import randint
 
 
-"""
-def isEmpty(squarenum):         #returns True if the square "squarenum" is empty and False if there is already an X or O there.
-    if data[squarenum] == "":
-        return (True)
-        else:
-            return (False)
-"""
-
 
 def winner(lett):                   #returns True if the requested letter won and False otherwise
     if data["square11"] == lett and  data["square12"] == lett and data["square13"] == lett: #checks vertical combos
@@ -55,14 +47,19 @@ def fullboard():                #returns True if every square is filled up with 
 
 def computerTurn():             #picks a random unused square and places the computer piece there.
     
-    piecePlaced=False
+    piecePlaced=False #used to re-run the function if no open square found
     
-    horiz = randint(1,3)
+    horiz = randint(1,3)  #Random numbers for picking squares
     vert = randint(1,3)
-    
+
+# Establishes text sprites
+
     red = Color(0xFF0000,1)
     youLose = TextAsset("You lost a game of TIC TAC TOE and your opponent was just guessing! Sheesh.", fill=red, style='bold 25pt Times')
     Os = TextAsset("O", fill=black, style='bold 100pt Times')
+    
+    
+# Picking squares using random numbers and completing move
     
     if horiz == 1:                                        #decides for first column numbers
         
@@ -140,12 +137,14 @@ def computerTurn():             #picks a random unused square and places the com
 def mouseClick(event):                   #responds to clicks; the player's turn
 
 
+# Establishes text sprites
+
     red = Color(0xFF0000,1)
     Xs = TextAsset("X", fill=black, style='bold 100pt Times')
     tiegame = TextAsset("It's a tie game, my dude!", fill=red, style='bold 50pt Times')
     youWin = TextAsset("Surprisingly, You Win!!", fill=red, style='bold 50pt Times')
 
-
+#Actions on click
     
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
