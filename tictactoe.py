@@ -99,6 +99,7 @@ def computerTurn():             #picks a random unused square and places the com
 def mouseClick(event):                   #responds to clicks; the player's turn
 
     Xs = TextAsset("X", fill=black, style='bold 100pt Times')
+    tiegame = TextAsset("It's a tie game, my dude!", fill=red, style='bold 50pt Times')
 
     if 100<= event.x <= (100+(WIDTH/3)):                                        #checks for first column click
         
@@ -108,7 +109,7 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             if winner():
                 print ("Surprisingy, you win!")
             elif fullboard():
-                print ("It's a tie game, my dude!")
+                Sprite(tiegame(50,50))
             computerTurn()
             
         elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
