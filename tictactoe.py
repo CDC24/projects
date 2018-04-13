@@ -135,7 +135,7 @@ def computerTurn():             #picks a random unused square and places the com
 
 
 def mouseClick(event):                   #responds to clicks; the player's turn
-if data["gameover"] == False:
+    if data["gameover"] == False:
     
     # Establishes text sprites
     
