@@ -151,9 +151,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             if 100<= event.y <=(100+(HEIGHT/3)) and data["square11"]=="":
                 Sprite (Xs,(120,100))
                 data["square11"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
@@ -162,9 +162,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square12"]=="":
                 Sprite (Xs,(120,230))
                 data["square12"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
@@ -173,9 +173,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square13"]=="":
                 Sprite (Xs,(120,360))
                 data["square13"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
@@ -186,9 +186,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             if 100<= event.y <=(100+(HEIGHT/3)) and data["square21"]=="":
                 Sprite (Xs,(250,100))
                 data["square21"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:                                       
@@ -197,9 +197,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square22"]=="":
                 Sprite (Xs,(250,230))
                 data["square22"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
@@ -208,9 +208,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square23"]=="":
                 Sprite (Xs,(250,360))
                 data["square23"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
@@ -221,9 +221,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             if 100<= event.y <=(100+(HEIGHT/3)) and data["square31"]=="":
                 Sprite (Xs,(380,100))
                 data["square31"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
@@ -232,9 +232,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             elif (100+(HEIGHT/3))<= event.y <=(100+(2*HEIGHT/3)) and data["square32"]=="":
                 Sprite (Xs,(380,230))
                 data["square32"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
@@ -243,9 +243,9 @@ def mouseClick(event):                   #responds to clicks; the player's turn
             elif (100+(2*HEIGHT/3))<= event.y <=(100+HEIGHT) and data["square33"]=="":
                 Sprite (Xs,(380,360))
                 data["square33"]= "x"
-                data["gameover"] = True
                 if winner("x"):
                     Sprite(youWin,(600,100))
+                    data["gameover"] = True
                 elif fullboard():
                     Sprite(tiegame,(600,100))
                 else:
