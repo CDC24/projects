@@ -68,6 +68,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square11"]= "o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
         elif vert == 2 and data["square12"]=="":
@@ -75,6 +76,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square12"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
         elif vert == 3 and data["square13"]=="":
@@ -82,6 +84,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square13"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
     elif horiz == 2:                                    #decides for second column numbers
@@ -91,6 +94,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square21"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
         elif vert == 2 and data["square22"]=="":
@@ -98,6 +102,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square22"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
         elif vert == 3 and data["square23"]=="":
@@ -105,6 +110,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square23"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
     elif horiz == 3:                            #decides for third column numbers
@@ -114,6 +120,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square31"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
             
@@ -122,6 +129,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square32"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
         elif vert == 3 and data["square33"]=="":
@@ -129,6 +137,7 @@ def computerTurn():             #picks a random unused square and places the com
             data["square33"]="o"
             if winner("o"):
                 Sprite(youLose,(600,100))
+                data["gameover"] = True
             piecePlaced=True
             
     if piecePlaced==False: computerTurn()
