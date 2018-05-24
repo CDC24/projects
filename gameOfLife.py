@@ -25,6 +25,10 @@ def numNeighbors(row,col):              #THIS ONLY TESTS INDEXING RIGHT NOW
     if board[row-1],[col-1] == 0:
         print ("this square is DEAD")
 
+def mouseClick():                       #THIS ONLY TESTS INDEXING RIGHT NOW
+    if board[row-1],[col-1] == 0:
+        print ("this square is DEAD")
+
 
 if __name__ == '__main__':
 
@@ -57,6 +61,6 @@ if __name__ == '__main__':
         Sprite(vertBoardLine,((40*i),0))
     
     
-    #App().listenMouseEvent("click",mouseClick)
+    App().listenMouseEvent("click",mouseClick)
     App().run()
     
