@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     #graphics
     
-    black = Color(0x000000,1)
+    black = Color(0x000000,0.25)
     red = Color(0xFF0000,1)
     yellow = Color(0xFFFF00,0.25)
     
@@ -37,18 +37,18 @@ if __name__ == '__main__':
     WIDTH = 1000
     
     
-    vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(1,black),black)
-    horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(1,black),black)
+    vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(0,black),black)
+    horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(0,black),black)
     boardBox = RectangleAsset(WIDTH,HEIGHT,LineStyle(1,yellow),yellow)
     
     
     
     # these sprite the grid
     Sprite(boardBox)
-    for i in range (0,HEIGHT):
+    for i in range (0,HEIGHT//10):              #sprites horizontal gridlines with 10 spacing
         Sprite(horizBoardLine,(0,(10*i)))
-    Sprite(vertBoardLine,((WIDTH/3),0))
-    Sprite(vertBoardLine,((2*WIDTH/3),0))
+    for i in range (0,WIDTH//10):               #sprites vertical gridlines with 10 spacing
+        Sprite(vertBoardLine,((10*i),0))
     
     
     
