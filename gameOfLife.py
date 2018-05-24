@@ -13,12 +13,8 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 """
 
 
-def buildBoard():               
-    board = [[][][][][][][][][][][][][][][][][][][][]]
-    for row in board:
-        for i in range (0, 20):
-            board[i-1].append(i)
-    print (board)
+def buildBoard():
+    board = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0][0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
 
     
 
@@ -33,7 +29,7 @@ if __name__ == '__main__':
     
     #setting up board
     
-    HEIGHT = 500
+    HEIGHT = 520
     WIDTH = 1000
     
     
@@ -45,12 +41,12 @@ if __name__ == '__main__':
     
     # these sprite the grid
     Sprite(boardBox)
-    for i in range (0,HEIGHT//20):              #sprites horizontal gridlines with 20 spacing
-        Sprite(horizBoardLine,(0,(20*i)))
-    for i in range (0,WIDTH//20):               #sprites vertical gridlines with 20 spacing
-        Sprite(vertBoardLine,((20*i),0))
+    for i in range (0,HEIGHT//40):              #sprites horizontal gridlines with 40 spacing
+        Sprite(horizBoardLine,(0,(40*i)))
+    for i in range (0,WIDTH//40):               #sprites vertical gridlines with 40 spacing
+        Sprite(vertBoardLine,((40*i),0))
     
-    
+    #buildBoard()
     
     #App().listenMouseEvent("click",mouseClick)
     App().run()
