@@ -14,7 +14,7 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 
 
 def buildBoard():               
-    board = [[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]]
+    board = [[][][][][][][][][][][][][][][][][][][][]]
     for row in board:
         for i in range (0, 20):
             board[i-1].append(i)
@@ -45,9 +45,9 @@ if __name__ == '__main__':
     
     # these sprite the grid
     Sprite(boardBox)
-    for i in range (0,HEIGHT//20):              #sprites horizontal gridlines with 10 spacing
+    for i in range (0,HEIGHT//20):              #sprites horizontal gridlines with 20 spacing
         Sprite(horizBoardLine,(0,(20*i)))
-    for i in range (0,WIDTH//20):               #sprites vertical gridlines with 10 spacing
+    for i in range (0,WIDTH//20):               #sprites vertical gridlines with 20 spacing
         Sprite(vertBoardLine,((20*i),0))
     
     
