@@ -26,8 +26,8 @@ def numNeighbors(row,col):              #THIS ONLY TESTS INDEXING RIGHT NOW
         print ("this square is DEAD")
 
 def mouseClick(event):
-    row = (mouseClick.y//40)            #senses click in horizontal gridlines with 40 spacing
-    col = (mouseClick.x//40)                #senses click in vertical gridlines with 40 spacing
+    row = (event.y//40)            #senses click in horizontal gridlines with 40 spacing
+    col = (event.x//40)                #senses click in vertical gridlines with 40 spacing
 
 
 if __name__ == '__main__':
