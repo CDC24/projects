@@ -45,7 +45,7 @@ if __name__ == '__main__':
     
     # these sprite the grid
     Sprite(boardBox)
-    for i in range (0,HEIGHT/10):
+    for i in range (0,HEIGHT):
         Sprite(horizBoardLine,(0,(10*i)))
     Sprite(vertBoardLine,((WIDTH/3),0))
     Sprite(vertBoardLine,((2*WIDTH/3),0))
