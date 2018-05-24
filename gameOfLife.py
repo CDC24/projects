@@ -45,10 +45,10 @@ if __name__ == '__main__':
     
     # these sprite the grid
     Sprite(boardBox)
-    for i in range (0,HEIGHT//10):              #sprites horizontal gridlines with 10 spacing
-        Sprite(horizBoardLine,(0,(10*i)))
-    for i in range (0,WIDTH//10):               #sprites vertical gridlines with 10 spacing
-        Sprite(vertBoardLine,((10*i),0))
+    for i in range (0,HEIGHT//20):              #sprites horizontal gridlines with 10 spacing
+        Sprite(horizBoardLine,(0,(20*i)))
+    for i in range (0,WIDTH//20):               #sprites vertical gridlines with 10 spacing
+        Sprite(vertBoardLine,((20*i),0))
     
     
     
