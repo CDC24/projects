@@ -19,15 +19,15 @@ def buildBoard():    #sprites a 13 x 25 matrix of zeroes(dead squares)
 
 def redrawAll():
     for item in App().spritelist[:]:
-    item.destroy()
+        item.destroy()
     
 def numNeighbors(row,col):              #THIS ONLY TESTS INDEXING RIGHT NOW
-    if board[row-1],[col-1] == 0:
+    if board[row-1][col-1] == 0:
         print ("this square is DEAD")
 
-def mouseClick():                       #THIS ONLY TESTS INDEXING RIGHT NOW
-    if board[row-1],[col-1] == 0:
-        print ("this square is DEAD")
+def mouseClick(event):
+    row = (mouseClick.y//40)            #senses click in horizontal gridlines with 40 spacing
+    col = (mouseClick.x//40)                #senses click in vertical gridlines with 40 spacing
 
 
 if __name__ == '__main__':
