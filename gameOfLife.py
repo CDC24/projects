@@ -57,8 +57,7 @@ def mouseClick(event):
             for i in range (0,25):
                 if col == i:
                     print ("You just clicked in row",row,"and column",col)
-    black = Color(0x000000,1)
-    liveCell = RectangleAsset(40,40,LineStyle(0,black),black)
+    liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     Sprite(liveCell,(event.x,event.y))
 
 
