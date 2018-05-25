@@ -70,7 +70,7 @@ if __name__ == '__main__':
     
     
     button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
-    Sprite(button,(0,0))
+    Sprite(button,(0,480))
     
     redrawAll()
     
