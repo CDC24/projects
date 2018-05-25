@@ -64,7 +64,7 @@ if __name__ == '__main__':
     data = {}
     data["matrix"] = buildBoard()
 
-
+"""
     #graphics
     
     black = Color(0x000000,0.25)
@@ -89,7 +89,7 @@ if __name__ == '__main__':
         Sprite(horizBoardLine,(0,(40*i)))
     for i in range (0,WIDTH//40):               #sprites vertical gridlines with 40 spacing
         Sprite(vertBoardLine,((40*i),0))
-    
+"""    
     
     App().listenMouseEvent("click",mouseClick)
     App().run()
