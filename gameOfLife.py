@@ -26,8 +26,8 @@ def numNeighbors(row,col):
             
 
 def mouseClick(event):
-    row = (event.y//40)           #senses click in horizontal gridlines with 40 spacing
-    col = (event.x//40)           #senses click in vertical gridlines with 40 spacing
+    row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
+    col = (int(event.x//40))           #senses click in vertical gridlines with 40 spacing
     for i in range(0,13):
         if row == i:
             for i in range (0,25):
