@@ -22,12 +22,6 @@ def redrawAll():
         item.destroy()
     #creating graphics
     
-    black = Color(0x000000,0.25)
-    red = Color(0xFF0000,1)
-    yellow = Color(0xFFFF00,0.25)
-    
-    #setting up board
-    
     HEIGHT = 520
     WIDTH = 1000
     
@@ -66,9 +60,18 @@ if __name__ == '__main__':
     data = {}
     data["matrix"] = buildBoard()
 
+    
+    black = Color(0x000000,0.25)
+    red = Color(0xFF0000,1)
+    yellow = Color(0xFFFF00,0.25)
+    
+    #runnning the functions
+    
     redrawAll()
+    
 
-
+    button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
+    Sprite(button,(1000,520))
     
 
     App().listenMouseEvent("click",mouseClick)
