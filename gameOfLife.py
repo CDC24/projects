@@ -59,6 +59,8 @@ def mouseClick(event):
                     print ("You just clicked in row",row,"and column",col)
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
+    if 0<= event.x <=80 and 480<=event.y<=520:
+        redrawAll()
 
 
 if __name__ == '__main__':
