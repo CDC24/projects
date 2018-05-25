@@ -22,11 +22,15 @@ def redrawAll():
         item.destroy()
     #creating graphics
     
+
+    button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
+    Sprite(button,(0,480))
+    
     HEIGHT = 480
     WIDTH = 1000
     
     
-    vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(0,black),black)
+    vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(0,black),black)   #board components
     horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(0,black),black)
     boardBox = RectangleAsset(WIDTH,HEIGHT,LineStyle(1,yellow),yellow)
     
@@ -67,10 +71,6 @@ if __name__ == '__main__':
     yellow = Color(0xFFFF00,0.25)
     
     #runnning the functions
-    
-    
-    button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
-    Sprite(button,(0,480))
     
     redrawAll()
     
