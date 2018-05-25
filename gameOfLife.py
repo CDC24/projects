@@ -24,7 +24,7 @@ def redrawAll():
     
 
     button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
-    nextGen = TextAsset("Next Gen", fill=black, style='bold 20pt Times')
+    nextGen = TextAsset("Next Gen", fill=blue, style='bold 20pt Times')
     Sprite(button,(0,480))
     Sprite(nextGen,(0,480))
     
@@ -67,7 +67,7 @@ if __name__ == '__main__':
     data = {}
     data["matrix"] = buildBoard()
 
-    
+    blue = Color(0x0000FF,1)
     black = Color(0x000000,0.25)
     red = Color(0xFF0000,1)
     yellow = Color(0xFFFF00,0.25)
