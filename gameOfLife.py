@@ -23,10 +23,10 @@ def redrawAll():
     #creating graphics
     
 
-    button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
-    nextGen = TextAsset("Next Gen", fill=blue, style='bold 10pt Times')
+    button = RectangleAsset(100,40,LineStyle(2,black),red)  #the next generation button
+    nextGen = TextAsset("Next Gen", fill=blue, style='bold 15pt Times')
     Sprite(button,(0,480))
-    Sprite(nextGen,(0,480))
+    Sprite(nextGen,(10,490))
     
     HEIGHT = 480
     WIDTH = 1000
