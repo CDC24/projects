@@ -22,9 +22,12 @@ def redrawAll():
         item.destroy()
     
 def numNeighbors(row,col):              #THIS ONLY TESTS SQUARE-SENSING RIGHT NOW
-    if row == 5:
-        if col == 5:
-            print ("Yes! you found the GOOD SQUARE")
+    for i in range(0,13):
+        if row == i:
+            for i in range (0,25):
+                if col == i:
+                    print ("Yes! you found the GOOD SQUARE")
+            
 
 def mouseClick(event):
     row = (event.y//40)           #senses click in horizontal gridlines with 40 spacing
