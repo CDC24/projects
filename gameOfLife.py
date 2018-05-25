@@ -21,23 +21,24 @@ def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
     
-def numNeighbors(row,col):              #THIS ONLY TESTS SQUARE-SENSING RIGHT NOW
-    for i in range(0,13):
-        if row == i:
-            for i in range (0,25):
-                if col == i:
-                    print ("You just clicked in row",row,"and column",col)
+def numNeighbors(row,col): 
+    return
             
 
 def mouseClick(event):
     row = (event.y//40)           #senses click in horizontal gridlines with 40 spacing
     col = (event.x//40)           #senses click in vertical gridlines with 40 spacing
-    numNeighbors(row,col)           #FOR TESTING ONLY
+    for i in range(0,13):
+        if row == i:
+            for i in range (0,25):
+                if col == i:
+                    print ("You just clicked in row",row,"and column",col)
 
 
 if __name__ == '__main__':
 
-    buildBoard()
+
+    matrix = [buildBoard()]
 
 
     #graphics
