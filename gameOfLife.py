@@ -72,7 +72,7 @@ if __name__ == '__main__':
     
 
     button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
-    Sprite(button,(1000,520))
+    Sprite(button,(9920,480))
     
 
     App().listenMouseEvent("click",mouseClick)
