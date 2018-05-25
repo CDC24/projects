@@ -57,6 +57,8 @@ def mouseClick(event):
             for i in range (0,25):
                 if col == i:
                     print ("You just clicked in row",row,"and column",col)
+    liveCell = RectangleAsset(40,40,LineStyle(0,black),black)
+    Sprite (liveCell,(event.x//40,event.y//40)
 
 
 if __name__ == '__main__':
@@ -66,34 +68,8 @@ if __name__ == '__main__':
 
     redrawAll()
 
+
+    
+
     App().listenMouseEvent("click",mouseClick)
     App().run()
-
-"""
-    #graphics
-    
-    black = Color(0x000000,0.25)
-    red = Color(0xFF0000,1)
-    yellow = Color(0xFFFF00,0.25)
-    
-    #setting up board
-    
-    HEIGHT = 520
-    WIDTH = 1000
-    
-    
-    vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(0,black),black)
-    horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(0,black),black)
-    boardBox = RectangleAsset(WIDTH,HEIGHT,LineStyle(1,yellow),yellow)
-    
-    
-    
-    # these sprite the grid
-    Sprite(boardBox)
-    for i in range (0,HEIGHT//40):              #sprites horizontal gridlines with 40 spacing
-        Sprite(horizBoardLine,(0,(40*i)))
-    for i in range (0,WIDTH//40):               #sprites vertical gridlines with 40 spacing
-        Sprite(vertBoardLine,((40*i),0))
-"""    
-    
-    
