@@ -68,11 +68,14 @@ if __name__ == '__main__':
     
     #runnning the functions
     
+    
+    button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
+    Sprite(button,(9920,480))
+    
     redrawAll()
     
 
-    button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
-    Sprite(button,(9920,480))
+    
     
 
     App().listenMouseEvent("click",mouseClick)
