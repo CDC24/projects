@@ -21,15 +21,15 @@ def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
     
-def numNeighbors(row,col):              #THIS ONLY TESTS INDEXING RIGHT NOW
-    if row == 0:
-        if col == 0:
-            print ("this square is DEAD")
+def numNeighbors(row,col):              #THIS ONLY TESTS SQUARE-SENSING RIGHT NOW
+    if row == 5:
+        if col == 5:
+            print ("Yes! you found the GOOD SQUARE")
 
 def mouseClick(event):
     row = (event.y//40)           #senses click in horizontal gridlines with 40 spacing
     col = (event.x//40)           #senses click in vertical gridlines with 40 spacing
-    numNeighbors(row,col)
+    numNeighbors(row,col)           #FOR TESTING ONLY
 
 
 if __name__ == '__main__':
