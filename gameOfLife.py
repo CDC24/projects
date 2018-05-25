@@ -24,7 +24,7 @@ def redrawAll():
     
 
     button = RectangleAsset(80,40,LineStyle(2,black),red)  #the next generation button
-    nextGen = TextAsset("Next Gen", fill=blue, style='bold 20pt Times')
+    nextGen = TextAsset("Next Gen", fill=blue, style='bold 10pt Times')
     Sprite(button,(0,480))
     Sprite(nextGen,(0,480))
     
