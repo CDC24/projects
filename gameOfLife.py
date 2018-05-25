@@ -64,6 +64,11 @@ if __name__ == '__main__':
     data = {}
     data["matrix"] = buildBoard()
 
+    redrawAll()
+
+    App().listenMouseEvent("click",mouseClick)
+    App().run()
+
 """
     #graphics
     
@@ -91,6 +96,4 @@ if __name__ == '__main__':
         Sprite(vertBoardLine,((40*i),0))
 """    
     
-    App().listenMouseEvent("click",mouseClick)
-    App().run()
     
