@@ -24,7 +24,7 @@ def redrawAll():
 def numNeighbors(row,col):              #THIS ONLY TESTS INDEXING RIGHT NOW
     if row == 0:
         if col == 0:
-        print ("this square is DEAD")
+            print ("this square is DEAD")
 
 def mouseClick(event):
     row = (event.y//40)           #senses click in horizontal gridlines with 40 spacing
