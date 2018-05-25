@@ -46,11 +46,12 @@ def numNeighbors(row,col):
 def mouseClick(event):
     row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
     col = (int(event.x//40))           #senses click in vertical gridlines with 40 spacing
-    for i in range(0,13):
+    for i in range(0,12):
         if row == i:
             for i in range (0,25):
                 if col == i:
                     print ("You just clicked in row",row,"and column",col)
+    black = Color(0x000000,1)
     liveCell = RectangleAsset(40,40,LineStyle(0,black),black)
     Sprite(liveCell,(event.x,event.y))
 
