@@ -26,7 +26,7 @@ def numNeighbors(row,col):              #THIS ONLY TESTS SQUARE-SENSING RIGHT NO
         if row == i:
             for i in range (0,25):
                 if col == i:
-                    print ("Yes! you found the GOOD SQUARE")
+                    print ("You just clicked in row",row,"and column",col)
             
 
 def mouseClick(event):
