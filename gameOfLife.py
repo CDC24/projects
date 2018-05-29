@@ -88,6 +88,7 @@ def numNeighbors(row,col):
                 num+=1
             if data["matrix"][i-1][e+1] == 1:
                 num+=1
+    print (num,"neighbors")
 
 
 if __name__ == '__main__':
