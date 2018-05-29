@@ -58,9 +58,9 @@ def redrawAll():
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
     for e in range (0,WIDTH//40):               #sprites grid of dead cells, 40 spacing
         for i in range (0,HEIGHT//40):
-            if data["matrix"][i][e] = 0:
+            if data["matrix"][i][e] == 0:
                 Sprite(deadCell,((40*e),(40*i)))
-            elif data["matrix"][i][e] = 0:
+            elif data["matrix"][i][e] == 1:
                 Sprite(liveCell,((40*e),(40*i)))
     
 def numNeighbors(row,col): 
