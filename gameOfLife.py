@@ -71,21 +71,21 @@ def numNeighbors(row,col):
     
     num = 0
     
-    if data["matrix"][i-1][e] == 1:       #senses adjacent cells
+    if data["matrix"][row-1][col] == 1:       #senses adjacent cells
         num+=1
-    if data["matrix"][i+1][e] == 1:
+    if data["matrix"][row+1][col] == 1:
         num+=1
-    if data["matrix"][i][e-1] == 1:
+    if data["matrix"][row][col-1] == 1:
         num+=1
-    if data["matrix"][i+1][e+1] == 1:
+    if data["matrix"][row+1][col+1] == 1:
         num+=1
-    if data["matrix"][i-1][e-1] == 1:
+    if data["matrix"][row-1][col-1] == 1:
         num+=1
-    if data["matrix"][i+1][e+1] == 1:
+    if data["matrix"][row+1][col+1] == 1:
         num+=1
-    if data["matrix"][i+1][e-1] == 1:
+    if data["matrix"][row+1][col-1] == 1:
         num+=1
-    if data["matrix"][i-1][e+1] == 1:
+    if data["matrix"][row-1][col+1] == 1:
             num+=1
     
     """
