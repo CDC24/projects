@@ -58,8 +58,10 @@ def mouseClick(event):
                 if col == i:
                     print ("You just clicked in row",row,"and column",col)
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
-    Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
-    if 0<= event.x <=80 and 480<=event.y<=520:
+    if 0<= event.x <=1000 and 0<=event.y<=480:
+        Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40))) 
+        
+    if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
 
 
