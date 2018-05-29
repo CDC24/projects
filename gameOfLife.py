@@ -63,7 +63,7 @@ def mouseClick(event):
         if data["matrix"][row][col] == 1:           #reverses status in matrix
             data["matrix"][row][col] = 0
         elif data["matrix"][row][col] == 0:
-            data["matrix"][row][col] = 0
+            data["matrix"][row][col] = 1
     print(data["matrix"])
 
         
