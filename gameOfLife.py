@@ -47,11 +47,11 @@ def redrawAll():
     """
     
     deadCell = RectangleAsset(40,40,LineStyle(1,black),blue)
-    for i in range (0,WIDTH//40):               #sprites grid of dead cells, 40 spacing
+    for e in range (0,WIDTH//40):               #sprites grid of dead cells, 40 spacing
         for i in range (0,HEIGHT//40):
-            Sprite(deadCell,(0,(40*i)))
-    for i in range (0,WIDTH//40):
-        Sprite(deadCell,((40*i),0))
+            Sprite(deadCell,((40*e),(40*i)))
+    #for i in range (0,WIDTH//40):
+    #    Sprite(deadCell,((40*i),0))
     
 def numNeighbors(row,col): 
     return
