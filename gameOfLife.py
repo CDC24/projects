@@ -63,6 +63,7 @@ def redrawAll():
             elif data["matrix"][i][e] == 1:
                 Sprite(liveCell,((40*e),(40*i)))
     
+    print("next gen is comlpete")
 def numNeighbors(row,col): 
     return
         
