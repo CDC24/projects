@@ -13,7 +13,7 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 """
 
 
-def buildBoard():    #sprites a 13 x 25 matrix of zeroes(dead squares)
+def buildBoard():    #sprites a 12 x 25 matrix of zeroes(dead squares)
     board = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
     return (board)
 
@@ -56,7 +56,7 @@ def redrawAll():
     
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
-    for e in range (0,WIDTH//40):               #sprites grid of dead cells, 40 spacing
+    for e in range (0,WIDTH//40):               #sprites 12 x 25 grid of dead cells initially
         for i in range (0,HEIGHT//40):
             if data["matrix"][i][e] == 0:
                 Sprite(deadCell,((40*e),(40*i)))
@@ -64,6 +64,8 @@ def redrawAll():
                 Sprite(liveCell,((40*e),(40*i)))
     
     print("next gen is complete")
+    
+    
 def numNeighbors(row,col): 
     return
         
