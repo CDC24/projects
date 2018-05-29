@@ -37,8 +37,8 @@ def mouseClick(event):
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
-        
-        
+
+
 
 def redrawAll():
     for item in App().spritelist[:]:
@@ -54,10 +54,14 @@ def redrawAll():
     HEIGHT = 480
     WIDTH = 1000
     
+    liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
     for e in range (0,WIDTH//40):               #sprites grid of dead cells, 40 spacing
         for i in range (0,HEIGHT//40):
-            Sprite(deadCell,((40*e),(40*i)))
+            if data["matrix"][i][e] = 0:
+                Sprite(deadCell,((40*e),(40*i)))
+            elif data["matrix"][i][e] = 0:
+                Sprite(liveCell,((40*e),(40*i)))
     
 def numNeighbors(row,col): 
     return
