@@ -64,7 +64,6 @@ def mouseClick(event):
             data["matrix"][row][col] = 0
         elif data["matrix"][row][col] == 0:
             data["matrix"][row][col] = 1
-    print(data["matrix"])
 
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
