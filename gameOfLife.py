@@ -34,6 +34,7 @@ def mouseClick(event):
         elif data["matrix"][row][col] == 0:
             data["matrix"][row][col] = 1
 
+    numNeighbors(row,col)
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
@@ -70,6 +71,24 @@ def numNeighbors(row,col):
     
     num = 0
     
+    if data["matrix"][i-1][e] == 1:       #senses adjacent cells
+        num+=1
+    if data["matrix"][i+1][e] == 1:
+        num+=1
+    if data["matrix"][i][e-1] == 1:
+        num+=1
+    if data["matrix"][i+1][e+1] == 1:
+        num+=1
+    if data["matrix"][i-1][e-1] == 1:
+        num+=1
+    if data["matrix"][i+1][e+1] == 1:
+        num+=1
+    if data["matrix"][i+1][e-1] == 1:
+        num+=1
+    if data["matrix"][i-1][e+1] == 1:
+            num+=1
+    
+    """
     for e in range (0,WIDTH//40): 
         for i in range (0,HEIGHT//40):
             if data["matrix"][i-1][e] == 1:       #senses adjacent cells
@@ -88,6 +107,7 @@ def numNeighbors(row,col):
                 num+=1
             if data["matrix"][i-1][e+1] == 1:
                 num+=1
+            """
     print (num,"neighbors")
 
 
