@@ -46,7 +46,7 @@ def redrawAll():
         Sprite(vertBoardLine,((40*i),0))
     """
     
-    liveCell = RectangleAsset(40,40,LineStyle(1,black),blue)
+    deadCell = RectangleAsset(40,40,LineStyle(1,black),blue)
     for i in range (0,HEIGHT//40):              #sprites grid of dead cells, 40 spacing
         Sprite(deadCell,(0,(40*i)))
     for i in range (0,WIDTH//40):
