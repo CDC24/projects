@@ -37,13 +37,20 @@ def redrawAll():
     boardBox = RectangleAsset(WIDTH,HEIGHT,LineStyle(1,yellow),yellow)
     
     
-    
+    """
     # these sprite the grid
     Sprite(boardBox)
     for i in range (0,HEIGHT//40):              #sprites horizontal gridlines with 40 spacing
         Sprite(horizBoardLine,(0,(40*i)))
     for i in range (0,WIDTH//40):               #sprites vertical gridlines with 40 spacing
         Sprite(vertBoardLine,((40*i),0))
+    """
+    
+    liveCell = RectangleAsset(40,40,LineStyle(1,black),blue)
+    for i in range (0,HEIGHT//40):              #sprites grid of dead cells, 40 spacing
+        Sprite(deadCell,(0,(40*i)))
+    for i in range (0,WIDTH//40):
+        Sprite(deadCell,((40*i),0))
     
 def numNeighbors(row,col): 
     return
