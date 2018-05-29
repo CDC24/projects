@@ -17,43 +17,6 @@ def buildBoard():    #sprites a 13 x 25 matrix of zeroes(dead squares)
     board = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
     return (board)
 
-def redrawAll():
-    for item in App().spritelist[:]:
-        item.destroy()
-    #creating graphics
-    
-
-    button = RectangleAsset(100,40,LineStyle(2,black),red)  #the next generation button
-    nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
-    Sprite(button,(0,480))
-    Sprite(nextGen,(10,490))
-    
-    HEIGHT = 480
-    WIDTH = 1000
-    
-    
-    vertBoardLine = RectangleAsset(2,HEIGHT,LineStyle(0,black),black)   #board components
-    horizBoardLine = RectangleAsset(WIDTH,2,LineStyle(0,black),black)
-    boardBox = RectangleAsset(WIDTH,HEIGHT,LineStyle(1,yellow),yellow)
-    
-    
-    """
-    # these sprite the grid
-    Sprite(boardBox)
-    for i in range (0,HEIGHT//40):              #sprites horizontal gridlines with 40 spacing
-        Sprite(horizBoardLine,(0,(40*i)))
-    for i in range (0,WIDTH//40):               #sprites vertical gridlines with 40 spacing
-        Sprite(vertBoardLine,((40*i),0))
-    """
-    
-    deadCell = RectangleAsset(40,40,LineStyle(1,black),blue)
-    for e in range (0,WIDTH//40):               #sprites grid of dead cells, 40 spacing
-        for i in range (0,HEIGHT//40):
-            Sprite(deadCell,((40*e),(40*i)))
-    
-def numNeighbors(row,col): 
-    return
-            
 
 def mouseClick(event):
     row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
@@ -74,6 +37,31 @@ def mouseClick(event):
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
+        
+        
+
+def redrawAll():
+    for item in App().spritelist[:]:
+        item.destroy()
+    #creating graphics
+    
+
+    button = RectangleAsset(100,40,LineStyle(2,black),red)  #the next generation button
+    nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
+    Sprite(button,(0,480))
+    Sprite(nextGen,(10,490))
+    
+    HEIGHT = 480
+    WIDTH = 1000
+    
+    deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
+    for e in range (0,WIDTH//40):               #sprites grid of dead cells, 40 spacing
+        for i in range (0,HEIGHT//40):
+            Sprite(deadCell,((40*e),(40*i)))
+    
+def numNeighbors(row,col): 
+    return
+        
 
 
 if __name__ == '__main__':
