@@ -56,6 +56,8 @@ def redrawAll():
     
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
+    
+    nextGeneration()
 
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
@@ -67,7 +69,7 @@ def redrawAll():
     print("next gen is complete")
     
     
-def nextGeneration:                   #changes matrix based on each cell's surroundings
+def nextGeneration():                   #changes matrix based on each cell's surroundings
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
         
