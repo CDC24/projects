@@ -57,6 +57,13 @@ def redrawAll():
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
 
+    for e in range (0,WIDTH//40):               #checks each column
+        for i in range (0,HEIGHT//40):          #checks each row
+            if data["matrix"][i][e] == 0:
+                Sprite(deadCell,((40*e),(40*i)))
+            if data["matrix"][i][e] == 1:
+                Sprite(liveCell,((40*e),(40*i)))
+
     print("next gen is complete")
     
     
