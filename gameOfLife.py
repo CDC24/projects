@@ -70,15 +70,18 @@ def redrawAll():
     
     
 def nextGeneration():                   #changes matrix based on each cell's surroundings
+
+    newMatrix = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
         
         #THIS IS THE IMPORTANT PART WHERE THE PROGRAM DECIDES WHAT LIVES AND WHAT DIES
         
             if data["matrix"][i][e] == 0 or numNeighbors(i,e)>3 or numNeighbors(i,e)<2:
-                data["matrix"][i][e] = 0 #Sprite(deadCell,((40*e),(40*i)))
+                newMatrix[i][e] = 0
             if data["matrix"][i][e] == 1 and numNeighbors(i,e)==3 or numNeighbors(i,e)==2:
-                data["matrix"][i][e] = 1 #Sprite(liveCell,((40*e),(40*i)))
+                newMatrix[i][e] = 1
     
     
     
