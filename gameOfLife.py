@@ -61,10 +61,10 @@ def redrawAll():
         
         #THIS IS THE IMPORTANT PART WHERE THE PROGRAM DECIDES WHAT LIVES AND WHAT DIES
         
-            if numNeighbors(i,e)>3 or numNeighbors(i,e)<2:            #sprites cell based on signs in matrix
-                Sprite(deadCell,((40*e),(40*i)))
-            elif data["matrix"][i][e] == 1 and numNeighbors(i,e)==3 or numNeighbors(i,e)==2:
-                Sprite(liveCell,((40*e),(40*i)))
+            if data["matrix"][i][e] == 0 or numNeighbors(i,e)>3 or numNeighbors(i,e)<2:            #sprites cell based on signs in matrix
+                data["matrix"][i][e] = 0 #Sprite(deadCell,((40*e),(40*i)))
+            if data["matrix"][i][e] == 1 and numNeighbors(i,e)==3 or numNeighbors(i,e)==2:
+                data["matrix"][i][e] = 1 #Sprite(liveCell,((40*e),(40*i)))
     
     print("next gen is complete")
     
@@ -105,13 +105,20 @@ if __name__ == '__main__':
     red = Color(0xFF0000,1)
     yellow = Color(0xFFFF00,0.25)
     
+    
+    HEIGHT = 480
+    WIDTH = 1000
+    deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
+    
     #runnning the functions
     
+    '''
     for e in range (0,WIDTH//40):
         for i in range (0,HEIGHT//40):
                 Sprite(deadCell,((40*e),(40*i))) #sprites initial dead cell grid
 
-    
+'''
+    redrawAll()
     
 
     App().listenMouseEvent("click",mouseClick)
