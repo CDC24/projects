@@ -110,9 +110,6 @@ if __name__ == '__main__':
     for e in range (0,WIDTH//40):
         for i in range (0,HEIGHT//40):
                 Sprite(deadCell,((40*e),(40*i))) #sprites initial dead cell grid
-    
-    redrawAll()
-    
 
     
     
