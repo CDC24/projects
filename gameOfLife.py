@@ -27,14 +27,13 @@ def mouseClick(event):
                 if col == i:
                     print ("You just clicked in row",row,"and column",col)
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
-    if 0<= event.x <=1000 and 0<=event.y<=480:
+    if 0<= event.x <=1000 and 0<=event.y<=480 and data["matrix"][row][col] == 0:
         Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
         if data["matrix"][row][col] == 1:           #reverses status in matrix
             data["matrix"][row][col] = 0
         elif data["matrix"][row][col] == 0:
             data["matrix"][row][col] = 1
 
-    print (numNeighbors(row,col),"neigbors")                        #tests numNeighbors
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
