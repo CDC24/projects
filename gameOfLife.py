@@ -34,7 +34,7 @@ def mouseClick(event):
         elif data["matrix"][row][col] == 0:
             data["matrix"][row][col] = 1
 
-    print (numNeighbors(row,col))                        #tests numNeighbors
+    print (numNeighbors(row,col),"neigbors")                        #tests numNeighbors
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
