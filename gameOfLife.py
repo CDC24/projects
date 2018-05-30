@@ -60,7 +60,7 @@ def redrawAll():
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
             if data["matrix"][i][e] == 0:
-                Sprite(deadCell,((40*e),(40*i)))
+                Sprite(deadCell,((40*e),(40*i)))                    #sprites based on matrix
             if data["matrix"][i][e] == 1:
                 Sprite(liveCell,((40*e),(40*i)))
 
