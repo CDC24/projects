@@ -58,7 +58,10 @@ def redrawAll():
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
-            if data["matrix"][i][e] == 0 or numNeighbors(i,e)>3:            #sprites cell based on signs in matrix
+        
+        #THIS IS THE IMPORTANT PART WHERE THE PROGRAM DECIDES WHAT LIVES AND WHAT DIES
+        
+            if data["matrix"][i][e] == 0 or numNeighbors(i,e)>3 or numNeighbors(i,e)<2:            #sprites cell based on signs in matrix
                 Sprite(deadCell,((40*e),(40*i)))
             elif data["matrix"][i][e] == 1:
                 Sprite(liveCell,((40*e),(40*i)))
