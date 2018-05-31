@@ -71,10 +71,10 @@ def nextGeneration():                   #changes matrix based on each cell's sur
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
             if data["matrix"][i][e] == 1 and numNeighbors(i,e)>3 or numNeighbors(i,e)<2:
-                data["matrix"][i][e] = 0
+                newMatrix[i][e] = 0
             if data["matrix"][i][e] == 0 and numNeighbors(i,e)==3:
-                data["matrix"][i][e] = 1
-    
+                newMatrix[i][e] = 1
+    data["matrix"] = newMatrix
     return data["matrix"]
     
     
