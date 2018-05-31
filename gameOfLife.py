@@ -13,7 +13,7 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 """
 
 
-def buildBoard():    #sprites a 12 x 25 matrix of zeroes(dead squares)
+def buildBoard():    #creates a 12 x 25 matrix of zeroes(dead squares)
     board = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
     return (board)
 
@@ -26,19 +26,14 @@ def mouseClick(event):
             for i in range (0,25):
                 if col == i:
                     print ("You just clicked in row",row,"and column",col)
-    liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
-    deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
     
     if 0<= event.x <=1000 and 0<=event.y<=480 and data["matrix"][row][col] == 0:
         Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
         data["matrix"][row][col] = 1         #reverses status in matrix
 
-   
     elif 0<= event.x <=1000 and 0<=event.y<=480 and data["matrix"][row][col] == 1:
         Sprite(deadCell,(event.x-(event.x%40),event.y-(event.y%40)))
         data["matrix"][row][col] = 0           #reverses status in matrix
-
-
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
@@ -56,12 +51,6 @@ def redrawAll():
     Sprite(button,(0,480))
     Sprite(nextGen,(10,490))
     
-    HEIGHT = 480
-    WIDTH = 1000
-    
-    liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
-    deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
-    
     #nextGeneration()
 
     for e in range (0,WIDTH//40):               #checks each column
@@ -76,20 +65,19 @@ def redrawAll():
     
 def nextGeneration():                   #changes matrix based on each cell's surroundings
 
-    newMatrix = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+    #newMatrix = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
 
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
         
         #THIS IS THE IMPORTANT PART WHERE THE PROGRAM DECIDES WHAT LIVES AND WHAT DIES
         
-            if data["matrix"][i][e] == 0 or numNeighbors(i,e)>3 or numNeighbors(i,e)<2:
-                newMatrix[i][e] = 0
-            if data["matrix"][i][e] == 1 and numNeighbors(i,e)==3 or numNeighbors(i,e)==2:
-                newMatrix[i][e] = 1
+            if data["matrix"][i][e] == 1 and numNeighbors(i,e)>3 or numNeighbors(i,e)<2:
+                data["matrix"][i][e] = 0
+            if data["matrix"][i][e] == 0 and numNeighbors(i,e)==3:
+                data["matrix"][i][e] = 1
     
-    data["matrix"]= newMatrix
-    return newMatrix
+    return data["matrix"]
     
     
 def numNeighbors(row,col): 
@@ -131,6 +119,8 @@ if __name__ == '__main__':
     
     HEIGHT = 480
     WIDTH = 1000
+    
+    liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
     
     #runnning the functions
