@@ -83,6 +83,7 @@ def nextGeneration():                   #changes matrix based on each cell's sur
             if data["matrix"][i][e] == 1 and numNeighbors(i,e)==3 or numNeighbors(i,e)==2:
                 newMatrix[i][e] = 1
     
+    data["matrix"]= newMatrix
     return newMatrix
     
     
@@ -129,11 +130,11 @@ if __name__ == '__main__':
     
     #runnning the functions
     
-    
+    """
     for e in range (0,WIDTH//40):
         for i in range (0,HEIGHT//40):
                 Sprite(deadCell,((40*e),(40*i))) #sprites initial dead cell grid
-
+    """
 
     redrawAll()
     
