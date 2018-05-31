@@ -21,11 +21,6 @@ def buildBoard():    #creates a 12 x 25 matrix of zeroes(dead squares)
 def mouseClick(event):
     row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
     col = (int(event.x//40))           #senses click in vertical gridlines with 40 spacing
-    for i in range(0,12):
-        if row == i:
-            for i in range (0,25):
-                if col == i:
-                    print ("You just clicked in row",row,"and column",col)
     
     if 0<= event.x <=1000 and 0<=event.y<=480 and data["matrix"][row][col] == 0:
         Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
