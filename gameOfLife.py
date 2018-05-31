@@ -86,9 +86,9 @@ def numNeighbors(row,col):
         num+=1
     if row!=11 and data["matrix"][row+1][col] == 1:       #tests below
         num+=1
-    if data["matrix"][row][col-1] == 1:       #tests left
+    if if col!=0 and data["matrix"][row][col-1] == 1:       #tests left
         num+=1
-    if data["matrix"][row][col+1] == 1:       #tests right
+    if if col!=24 data["matrix"][row][col+1] == 1:       #tests right
         num+=1
     if data["matrix"][row-1][col-1] == 1:       #tests top left
         num+=1
