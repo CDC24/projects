@@ -51,7 +51,7 @@ def redrawAll():
     Sprite(button,(0,480))
     Sprite(nextGen,(10,490))
     
-    #nextGeneration()
+    nextGeneration()
 
     for e in range (0,WIDTH//40):               #checks each column
         for i in range (0,HEIGHT//40):          #checks each row
@@ -66,8 +66,6 @@ def redrawAll():
 def nextGeneration():                   #changes matrix based on each cell's surroundings
 
     #newMatrix = [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
-
-
 #THIS IS THE IMPORTANT PART WHERE THE PROGRAM DECIDES WHAT LIVES AND WHAT DIES
 
     for e in range (0,WIDTH//40):               #checks each column
@@ -83,22 +81,22 @@ def nextGeneration():                   #changes matrix based on each cell's sur
 def numNeighbors(row,col): 
     
     num = 0
-    
-    if data["matrix"][row-1][col] == 1:       #senses adjacent cells
-        num+=1
-    if data["matrix"][row+1][col] == 1:
-        num+=1
-    if data["matrix"][row][col-1] == 1:
-        num+=1
-    if data["matrix"][row][col+1] == 1:
-        num+=1
-    if data["matrix"][row-1][col-1] == 1:
-        num+=1
-    if data["matrix"][row+1][col+1] == 1:
-        num+=1
-    if data["matrix"][row+1][col-1] == 1:
-        num+=1
-    if data["matrix"][row-1][col+1] == 1:
+    if 1<row<10 and 1<col<20:
+        if data["matrix"][row-1][col] == 1:       #senses adjacent cells
+            num+=1
+        if data["matrix"][row+1][col] == 1:
+            num+=1
+        if data["matrix"][row][col-1] == 1:
+            num+=1
+        if data["matrix"][row][col+1] == 1:
+            num+=1
+        if data["matrix"][row-1][col-1] == 1:
+            num+=1
+        if data["matrix"][row+1][col+1] == 1:
+            num+=1
+        if data["matrix"][row+1][col-1] == 1:
+            num+=1
+        if data["matrix"][row-1][col+1] == 1:
             num+=1
     
     print (num)
