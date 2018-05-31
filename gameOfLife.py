@@ -98,8 +98,7 @@ def numNeighbors(row,col):
             num+=1
         if data["matrix"][row-1][col+1] == 1:
             num+=1
-    
-    print (num)
+
     return num
 
 
