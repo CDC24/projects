@@ -81,23 +81,23 @@ def nextGeneration():                   #changes matrix based on each cell's sur
 def numNeighbors(row,col): 
     
     num = 0
-    if 1<row<11 and 1<col<24:
-        if data["matrix"][row-1][col] == 1:       #senses adjacent cells
-            num+=1
-        if data["matrix"][row+1][col] == 1:
-            num+=1
-        if data["matrix"][row][col-1] == 1:
-            num+=1
-        if data["matrix"][row][col+1] == 1:
-            num+=1
-        if data["matrix"][row-1][col-1] == 1:
-            num+=1
-        if data["matrix"][row+1][col+1] == 1:
-            num+=1
-        if data["matrix"][row+1][col-1] == 1:
-            num+=1
-        if data["matrix"][row-1][col+1] == 1:
-            num+=1
+
+    if row!=0 and data["matrix"][row-1][col] == 1:       #senses adjacent cells
+        num+=1
+    if row!=11 and data["matrix"][row+1][col] == 1:
+        num+=1
+    if data["matrix"][row][col-1] == 1:
+        num+=1
+    if data["matrix"][row][col+1] == 1:
+        num+=1
+    if data["matrix"][row-1][col-1] == 1:
+        num+=1
+    if data["matrix"][row+1][col+1] == 1:
+        num+=1
+    if data["matrix"][row+1][col-1] == 1:
+        num+=1
+    if data["matrix"][row-1][col+1] == 1:
+        num+=1
 
     return num
 
