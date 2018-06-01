@@ -70,7 +70,8 @@ def redrawAll():
             elif data["matrix"][i][e] == 1:
                 Sprite(liveCell,((40*e),(40*i)))
 
-    print("next gen is complete")
+    data["generation"]+=1
+    print("Generation",data["generation"],"is complete")
 
     
 def nextGeneration():                   #changes matrix based on each cell's surroundings
@@ -119,6 +120,7 @@ if __name__ == '__main__':
     data = {}
     data["matrix"] = buildBoard()
     data["steps"] = 0
+    data["generation"] = 0
 
     black = Color(0x000000,0.25)
     fullblack = Color(0x000000,1)
