@@ -34,11 +34,11 @@ def mouseClick(event):
         redrawAll()
         
     if 110<= event.x <=210 and 480<=event.y<=520:          #run button
-        run()
+        runContinuous()
 
 
-def run():
-    App().run(step)
+def runContinuous():
+    App().run(runContinuous)
     data["steps"] += 1
     if data["steps"]%300 == 0:
         redrawAll()
