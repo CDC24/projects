@@ -50,8 +50,8 @@ def runContinuous():
 def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
+        
     #creating graphics
-    
 
     button = RectangleAsset(100,40,LineStyle(2,black),red)  #the next generation button
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
@@ -67,7 +67,7 @@ def redrawAll():
         for i in range (0,HEIGHT//40):          #checks each row
             if data["matrix"][i][e] == 0:
                 Sprite(deadCell,((40*e),(40*i)))                    #sprites based on matrix
-            if data["matrix"][i][e] == 1:
+            elif data["matrix"][i][e] == 1:
                 Sprite(liveCell,((40*e),(40*i)))
 
     print("next gen is complete")
@@ -111,7 +111,6 @@ def numNeighbors(row,col):
     if row!= 0 and col!=24 and data["matrix"][row-1][col+1] == 1:       #tests top right
         num+=1
 
-
     return num
 
 
@@ -121,7 +120,6 @@ if __name__ == '__main__':
     data["matrix"] = buildBoard()
     data["steps"] = 0
 
-    blue = Color(0x0000FF,1)
     black = Color(0x000000,0.25)
     fullblack = Color(0x000000,1)
     red = Color(0xFF0000,1)
@@ -134,14 +132,7 @@ if __name__ == '__main__':
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
     
-    #runnning the functions
     
-    """
-    for e in range (0,WIDTH//40):
-        for i in range (0,HEIGHT//40):
-                Sprite(deadCell,((40*e),(40*i))) #sprites initial dead cell grid
-    """
-
     redrawAll()
     
 
