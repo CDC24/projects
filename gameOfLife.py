@@ -33,10 +33,15 @@ def mouseClick(event):
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
         
-    if 90<= event.x <=170 and 480<=event.y<=520:          #run button
+    if 110<= event.x <=210 and 480<=event.y<=520:          #run button
+        run()
+
+
+def run():
+    App().run(step)
+    data["steps"] += 1
+    if data["steps"]%300 == 0:
         redrawAll()
-
-
 
 def redrawAll():
     for item in App().spritelist[:]:
@@ -50,7 +55,7 @@ def redrawAll():
     Sprite(button,(0,480))
     Sprite(button,(110,480))
     Sprite(nextGen,(10,490))
-    Sprite(run,(10,490))
+    Sprite(run,(140,490))
     
     nextGeneration()
 
@@ -110,6 +115,7 @@ if __name__ == '__main__':
 
     data = {}
     data["matrix"] = buildBoard()
+    data["steps"] = 0
 
     blue = Color(0x0000FF,1)
     black = Color(0x000000,0.25)
