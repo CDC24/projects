@@ -36,6 +36,9 @@ def mouseClick(event):
     if 110<= event.x <=210 and 480<=event.y<=520:          #run button
         runContinuous()
 
+def space():
+    redrawAll()
+    
 
 def runContinuous():
     App().run(runContinuous)
@@ -142,4 +145,5 @@ if __name__ == '__main__':
     
 
     App().listenMouseEvent("click",mouseClick)
+    App().listenKeyEvent('keydown','space', space)
     App().run()
