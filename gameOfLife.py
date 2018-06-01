@@ -120,7 +120,7 @@ if __name__ == '__main__':
     data = {}
     data["matrix"] = buildBoard()
     data["steps"] = 0
-    data["generation"] = 0
+    data["generation"] = -1
 
     black = Color(0x000000,0.25)
     fullblack = Color(0x000000,1)
