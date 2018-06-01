@@ -33,12 +33,13 @@ def mouseClick(event):
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
         
-    if 110<= event.x <=210 and 480<=event.y<=520:          #run button
+    if 110<= event.x <=210 and 480<=event.y<=520:          #run button DOESN'T WORK WELL YET
         runContinuous()
 
-def space():
+
+def space(event):               #does the same thing as the next gen button but uses the spacebar
     redrawAll()
-    
+
 
 def runContinuous():
     App().run(runContinuous)
