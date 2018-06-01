@@ -32,6 +32,9 @@ def mouseClick(event):
         
     if 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
         redrawAll()
+        
+    if 90<= event.x <=170 and 480<=event.y<=520:          #run button
+        redrawAll()
 
 
 
@@ -43,8 +46,11 @@ def redrawAll():
 
     button = RectangleAsset(100,40,LineStyle(2,black),red)  #the next generation button
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
+    run = TextAsset("Run", fill=fullblack, style='bold 15pt Times')
     Sprite(button,(0,480))
+    Sprite(button,(90,480))
     Sprite(nextGen,(10,490))
+    Sprite(nextGen,(110,490))
     
     nextGeneration()
 
