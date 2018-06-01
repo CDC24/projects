@@ -48,9 +48,9 @@ def redrawAll():
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
     run = TextAsset("Run", fill=fullblack, style='bold 15pt Times')
     Sprite(button,(0,480))
-    Sprite(button,(90,480))
+    Sprite(button,(110,480))
     Sprite(nextGen,(10,490))
-    Sprite(nextGen,(110,490))
+    Sprite(run,(10,490))
     
     nextGeneration()
 
