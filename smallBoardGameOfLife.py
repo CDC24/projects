@@ -44,7 +44,7 @@ def space(event):               #does the same thing as the next gen button but 
 def runContinuous():
     App().run(runContinuous)
     data["steps"] += 1
-    if data["steps"]%300 == 0:
+    if data["steps"]%500 == 0:
         redrawAll()
 
 def redrawAll():
