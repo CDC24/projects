@@ -26,7 +26,7 @@ def mouseClick(event):
         Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
         data["matrix"][row][col] = 1         #reverses status in matrix
 
-    elif 0<= event.x <=100 and 0<=event.y<=100 and data["matrix"][row][col] == 1:
+    elif 0<= event.x <=400 and 0<=event.y<=400 and data["matrix"][row][col] == 1:
         Sprite(deadCell,(event.x-(event.x%40),event.y-(event.y%40)))
         data["matrix"][row][col] = 0           #reverses status in matrix
         
