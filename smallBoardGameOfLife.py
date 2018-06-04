@@ -18,7 +18,7 @@ def buildBoard():    #creates a 10 x 10 matrix of zeroes(dead squares)
 
 
 
-def mouseClick(event):
+def mouseClick(event):          #deals with mouse click coordinates and resulting actions
     row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
     col = (int(event.x//40))           #senses click in vertical gridlines with 40 spacing
     
@@ -41,23 +41,23 @@ def space(event):               #does the same thing as the next gen button but 
     redrawAll()
 
 
-def runContinuous():
+def runContinuous():                #runs the program at step intervals
     App().run(runContinuous)
     data["steps"] += 1
     if data["steps"]%500 == 0:
         redrawAll()
 
-def redrawAll():
+def redrawAll():                            #redraws the board based on matrix data
     for item in App().spritelist[:]:
         item.destroy()
         
     #creating graphics
 
-    button = RectangleAsset(100,40,LineStyle(2,black),red)  #the next generation button
+    button = RectangleAsset(100,40,LineStyle(2,black),red)
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
     run = TextAsset("Run", fill=fullblack, style='bold 15pt Times')
-    Sprite(button,(0,420))
-    Sprite(button,(110,420))
+    Sprite(button,(0,420))               #the next generation button
+    Sprite(button,(110,420))             #the run button
     Sprite(nextGen,(10,430))
     Sprite(run,(140,430))
     
@@ -91,7 +91,7 @@ def nextGeneration():                   #changes matrix based on each cell's sur
     return data["matrix"]
     
     
-def numNeighbors(row,col): 
+def numNeighbors(row,col):            #returns the number of living cells around the cell with given coordinates
     
     num = 0
 
