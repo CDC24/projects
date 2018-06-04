@@ -13,8 +13,8 @@ Any dead cell with exactly three live neighbors becomes a live cell, as if by re
 """
 
 
-def buildBoard():    #creates a 12 x 25 matrix of zeroes(dead squares)
-    return [[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]
+def buildBoard():    #creates a 10 x 10 matrix of zeroes(dead squares)
+    return [[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0,0]]
 
 
 
@@ -22,18 +22,18 @@ def mouseClick(event):
     row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
     col = (int(event.x//40))           #senses click in vertical gridlines with 40 spacing
     
-    if 0<= event.x <=1000 and 0<=event.y<=480 and data["matrix"][row][col] == 0:
+    if 0<= event.x <=100 and 0<=event.y<=100 and data["matrix"][row][col] == 0:
         Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
         data["matrix"][row][col] = 1         #reverses status in matrix
 
-    elif 0<= event.x <=1000 and 0<=event.y<=480 and data["matrix"][row][col] == 1:
+    elif 0<= event.x <=100 and 0<=event.y<=100 and data["matrix"][row][col] == 1:
         Sprite(deadCell,(event.x-(event.x%40),event.y-(event.y%40)))
         data["matrix"][row][col] = 0           #reverses status in matrix
         
-    elif 0<= event.x <=80 and 480<=event.y<=520:          #nextGen button
+    elif 0<= event.x <=80 and 480<=event.y<=120:          #nextGen button
         redrawAll()
         
-    elif 110<= event.x <=210 and 480<=event.y<=520:          #run button DOESN'T WORK WELL YET
+    elif 110<= event.x <=210 and 480<=event.y<=120:          #run button DOESN'T WORK WELL YET
         runContinuous()
 
 
@@ -57,9 +57,9 @@ def redrawAll():
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
     run = TextAsset("Run", fill=fullblack, style='bold 15pt Times')
     Sprite(button,(0,480))
-    Sprite(button,(110,480))
-    Sprite(nextGen,(10,490))
-    Sprite(run,(140,490))
+    Sprite(button,(110,120))
+    Sprite(nextGen,(10,120))
+    Sprite(run,(140,120))
     
     nextGeneration()
 
@@ -128,8 +128,8 @@ if __name__ == '__main__':
     yellow = Color(0xFFFF00,0.25)
     
     
-    HEIGHT = 480
-    WIDTH = 1000
+    HEIGHT = 100
+    WIDTH = 100
     
     liveCell = RectangleAsset(40,40,LineStyle(0,fullblack),fullblack)
     deadCell = RectangleAsset(40,40,LineStyle(1,black),yellow)
