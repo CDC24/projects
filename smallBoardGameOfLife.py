@@ -33,7 +33,7 @@ def mouseClick(event):
     elif 0<= event.x <=100 and 420<=event.y<=480:          #nextGen button
         redrawAll()
         
-    elif 110<= event.x <=210 and 480<=event.y<=120:          #run button DOESN'T WORK WELL YET
+    elif 110<= event.x <=210 and 420<=event.y<=480:          #run button DOESN'T WORK WELL YET
         runContinuous()
 
 
