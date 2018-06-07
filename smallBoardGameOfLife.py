@@ -36,7 +36,7 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
     elif 110<= event.x <=210 and 420<=event.y<=480:          #run button
         runContinuous()
     
-    elif 220<= event.x <=3200 and 420<=event.y<=480:          #stop button
+    elif 220<= event.x <=320 and 420<=event.y<=480:          #stop button
         runContinuous()
 
 
