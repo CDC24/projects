@@ -48,7 +48,7 @@ def runContinuous():                #runs the program at step intervals
     App().listenMouseEvent("click",mouseClick)
     App().run(runContinuous)
     data["steps"] += 1
-    if data["steps"]%500 == 0 and data["stop"] = False:
+    if data["steps"]%500 == 0 and data["stop"] == False:
         redrawAll()
 
 def redrawAll():                            #redraws the board based on matrix data
