@@ -49,11 +49,11 @@ def space(event):               #does the same thing as the next gen button but 
 def runContinuous():                #runs the program at step intervals
     App().listenMouseEvent("click",mouseClick)
     App().run(runContinuous)
-    if data["stop"]==False:
+    while data["stop"]==False:
         data["steps"] += 1
         if data["steps"]%1000 == 0:
             redrawAll()
-    elif data["stop"]==True:
+    if data["stop"]==True:
         App().listenMouseEvent("click",mouseClick)
         App().listenKeyEvent('keydown','space', space)
         App().run()
