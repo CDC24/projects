@@ -33,7 +33,10 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
     elif 0<= event.x <=100 and 420<=event.y<=480:          #nextGen button
         redrawAll()
         
-    elif 110<= event.x <=210 and 420<=event.y<=480:          #run button DOESN'T WORK WELL YET
+    elif 110<= event.x <=210 and 420<=event.y<=480:          #run button
+        runContinuous()
+    
+    elif 110<= event.x <=210 and 420<=event.y<=480:          #stop button
         runContinuous()
 
 
@@ -56,8 +59,10 @@ def redrawAll():                            #redraws the board based on matrix d
     button = RectangleAsset(100,40,LineStyle(2,black),red)
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
     run = TextAsset("Run", fill=fullblack, style='bold 15pt Times')
+    stop = TextAsset("Stop", fill=fullblack, style='bold 15pt Times')
     Sprite(button,(0,420))               #the next generation button
     Sprite(button,(110,420))             #the run button
+    Sprite(button,(220,420))             #the stop button
     Sprite(nextGen,(10,430))
     Sprite(run,(140,430))
     
