@@ -49,7 +49,6 @@ def glider():                #makes a glider when button pressed
     data["matrix"][3][3] = 1
     data["matrix"][2][3] = 1
     data["matrix"][1][3] = 1
-    Sprite(liveCell,((40*e),(40*i)))
     Sprite(liveCell,(80,40))
     Sprite(liveCell,(120,80))
     Sprite(liveCell,(120,120))
