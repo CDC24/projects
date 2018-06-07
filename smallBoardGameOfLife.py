@@ -22,7 +22,7 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
     row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
     col = (int(event.x//40))           #senses click in vertical gridlines with 40 spacing
     
-    #print("row",row,"col",col)
+    print("row",row,"col",col)
     
     if 0<= event.x <=400 and 0<=event.y<=400 and data["matrix"][row][col] == 0:
         Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
@@ -37,6 +37,9 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
         
     elif 110<= event.x <=210 and 420<=event.y<=480:          #glider button
         glider()
+        
+    elif 110<= event.x <=210 and 420<=event.y<=480:          #plus button
+        plus()
 
 
 def space(event):               #does the same thing as the next gen button but uses the spacebar
@@ -44,12 +47,24 @@ def space(event):               #does the same thing as the next gen button but 
 
 
 def glider():                #makes a glider when button pressed
-    data["matrix"][2][1] = 1
+    data["matrix"][2][1] = 1        #changes matrix
     data["matrix"][3][2] = 1
     data["matrix"][3][3] = 1
     data["matrix"][2][3] = 1
     data["matrix"][1][3] = 1
-    Sprite(liveCell,(80,40))
+    Sprite(liveCell,(80,40))        #temporary sprites
+    Sprite(liveCell,(120,80))
+    Sprite(liveCell,(120,120))
+    Sprite(liveCell,(80,120))
+    Sprite(liveCell,(40,120))
+    
+def glider():                #makes a plus when button pressed
+    data["matrix"][2][1] = 1        #changes matrix
+    data["matrix"][3][2] = 1
+    data["matrix"][3][3] = 1
+    data["matrix"][2][3] = 1
+    data["matrix"][1][3] = 1
+    Sprite(liveCell,(80,40))        #temporary sprites
     Sprite(liveCell,(120,80))
     Sprite(liveCell,(120,120))
     Sprite(liveCell,(80,120))
@@ -71,7 +86,7 @@ def redrawAll():                            #redraws the board based on matrix d
     Sprite(button,(220,420))             #the spaceship button
     Sprite(nextGen,(10,430))
     Sprite(glider,(135,430))
-    Sprite(plus,(240,430))
+    Sprite(plus,(250,430))
     
     nextGeneration()
 
