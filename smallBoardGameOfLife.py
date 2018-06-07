@@ -45,8 +45,8 @@ def space(event):               #does the same thing as the next gen button but 
 
 def glider():                #makes a glider when button pressed
     data["matrix"][2][1] = 1
-    data["matrix"][1][1] = 1
-    data["matrix"][1][1] = 1
+    data["matrix"][3][2] = 1
+    data["matrix"][3][3] = 1
     data["matrix"][1][1] = 1
     data["matrix"][1][1] = 1
 
