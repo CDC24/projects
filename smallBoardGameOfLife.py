@@ -33,7 +33,7 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
         data["matrix"][row][col] = 0           #reverses status in matrix
         
     elif 0<= event.x <=100 and 420<=event.y<=480:          #nextGen button
-        nextGen()
+        nextGeneration()
         
     elif 110<= event.x <=210 and 420<=event.y<=480:          #glider button
         glider()
