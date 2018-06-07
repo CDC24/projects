@@ -67,10 +67,10 @@ def plus():                #makes a plus when button pressed
     data["matrix"][4][5] = 1
     Sprite(liveCell,(200,160))        #temporary sprites
     Sprite(liveCell,(160,160))
-    Sprite(liveCell,(120,1600))
+    Sprite(liveCell,(120,160))
     Sprite(liveCell,(160,120))
     Sprite(liveCell,(160,120))
-    Sprite(liveCell,(160,120))
+    Sprite(liveCell,(160,200))
 
 
 def redrawAll():                            #redraws the board based on matrix data
