@@ -65,13 +65,13 @@ def redrawAll():                            #redraws the board based on matrix d
     button = RectangleAsset(100,40,LineStyle(2,black),red)
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
     glider = TextAsset("Glider", fill=fullblack, style='bold 15pt Times')
-    spaceship = TextAsset("Spaceship", fill=fullblack, style='bold 15pt Times')
+    plus = TextAsset("Plus", fill=fullblack, style='bold 15pt Times')
     Sprite(button,(0,420))               #the next generation button
     Sprite(button,(110,420))             #the glider button
     Sprite(button,(220,420))             #the spaceship button
     Sprite(nextGen,(10,430))
     Sprite(glider,(135,430))
-    Sprite(spaceship,(220,430))
+    Sprite(plus,(240,430))
     
     nextGeneration()
 
