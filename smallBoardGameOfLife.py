@@ -58,12 +58,13 @@ def glider():                #makes a glider when button pressed
     Sprite(liveCell,(80,120))
     Sprite(liveCell,(40,120))
     
-def glider():                #makes a plus when button pressed
-    data["matrix"][2][1] = 1        #changes matrix
-    data["matrix"][3][2] = 1
-    data["matrix"][3][3] = 1
-    data["matrix"][2][3] = 1
-    data["matrix"][1][3] = 1
+def plus():                #makes a plus when button pressed
+    data["matrix"][5][4] = 1        #changes matrix
+    data["matrix"][4][4] = 1
+    data["matrix"][3][4] = 1
+    data["matrix"][4][3] = 1
+    data["matrix"][4][3] = 1
+    data["matrix"][4][3] = 1
     Sprite(liveCell,(80,40))        #temporary sprites
     Sprite(liveCell,(120,80))
     Sprite(liveCell,(120,120))
