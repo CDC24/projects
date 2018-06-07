@@ -63,12 +63,10 @@ def plus():                #makes a plus when button pressed
     data["matrix"][4][4] = 1
     data["matrix"][3][4] = 1
     data["matrix"][4][3] = 1
-    data["matrix"][4][3] = 1
     data["matrix"][4][5] = 1
     Sprite(liveCell,(200,160))        #temporary sprites
     Sprite(liveCell,(160,160))
     Sprite(liveCell,(120,160))
-    Sprite(liveCell,(160,120))
     Sprite(liveCell,(160,120))
     Sprite(liveCell,(160,200))
 
