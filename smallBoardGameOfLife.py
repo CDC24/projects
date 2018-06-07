@@ -83,7 +83,7 @@ def redrawAll():                            #redraws the board based on matrix d
     plus = TextAsset("Plus", fill=fullblack, style='bold 15pt Times')
     Sprite(button,(0,420))               #the next generation button
     Sprite(button,(110,420))             #the glider button
-    Sprite(button,(220,420))             #the spaceship button
+    Sprite(button,(220,420))             #the plus button
     Sprite(nextGen,(10,430))
     Sprite(glider,(135,430))
     Sprite(plus,(250,430))
