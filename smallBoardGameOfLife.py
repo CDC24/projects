@@ -47,8 +47,8 @@ def glider():                #makes a glider when button pressed
     data["matrix"][2][1] = 1
     data["matrix"][3][2] = 1
     data["matrix"][3][3] = 1
-    data["matrix"][1][1] = 1
-    data["matrix"][1][1] = 1
+    data["matrix"][2][3] = 1
+    data["matrix"][1][3] = 1
 
 def redrawAll():                            #redraws the board based on matrix data
     for item in App().spritelist[:]:
