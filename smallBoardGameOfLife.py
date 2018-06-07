@@ -22,6 +22,8 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
     row = (int(event.y//40))           #senses click in horizontal gridlines with 40 spacing
     col = (int(event.x//40))           #senses click in vertical gridlines with 40 spacing
     
+    print("row",row,"col",col)
+    
     if 0<= event.x <=400 and 0<=event.y<=400 and data["matrix"][row][col] == 0:
         Sprite(liveCell,(event.x-(event.x%40),event.y-(event.y%40)))
         data["matrix"][row][col] = 1         #reverses status in matrix
@@ -42,7 +44,7 @@ def space(event):               #does the same thing as the next gen button but 
 
 
 def glider():                #makes a glider when button pressed
-    data["matrix"][1][1] = 1
+    data["matrix"][2][1] = 1
     data["matrix"][1][1] = 1
     data["matrix"][1][1] = 1
     data["matrix"][1][1] = 1
