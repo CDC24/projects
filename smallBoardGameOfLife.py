@@ -31,32 +31,18 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
         data["matrix"][row][col] = 0           #reverses status in matrix
         
     elif 0<= event.x <=100 and 420<=event.y<=480:          #nextGen button
-        redrawAll()
+        nextGen()
         
-    elif 110<= event.x <=210 and 420<=event.y<=480:          #run button
-        data["stop"]=False
-        runContinuous()
-    
-    elif 220<= event.x <=320 and 420<=event.y<=480:          #stop button
-        data["stop"]=True
-        print ("STOP THE TRAIN")
+    elif 110<= event.x <=210 and 420<=event.y<=480:          #glider button
+        glider()
 
 
 def space(event):               #does the same thing as the next gen button but uses the spacebar
     redrawAll()
 
 
-def runContinuous():                #runs the program at step intervals
-    App().listenMouseEvent("click",mouseClick)
-    App().run(runContinuous)
-    while data["stop"]==False:
-        data["steps"] += 1
-        if data["steps"]%1000 == 0:
-            redrawAll()
-    if data["stop"]==True:
-        App().listenMouseEvent("click",mouseClick)
-        App().listenKeyEvent('keydown','space', space)
-        App().run()
+def glider():                #makes a glider when button pressed
+    
 
 def redrawAll():                            #redraws the board based on matrix data
     for item in App().spritelist[:]:
@@ -66,13 +52,13 @@ def redrawAll():                            #redraws the board based on matrix d
 
     button = RectangleAsset(100,40,LineStyle(2,black),red)
     nextGen = TextAsset("Next Gen", fill=fullblack, style='bold 15pt Times')
-    run = TextAsset("Run", fill=fullblack, style='bold 15pt Times')
+    glider = TextAsset("Glider", fill=fullblack, style='bold 15pt Times')
     stop = TextAsset("Stop", fill=fullblack, style='bold 15pt Times')
     Sprite(button,(0,420))               #the next generation button
     Sprite(button,(110,420))             #the run button
     Sprite(button,(220,420))             #the stop button
     Sprite(nextGen,(10,430))
-    Sprite(run,(140,430))
+    Sprite(glider,(140,430))
     
     nextGeneration()
 
