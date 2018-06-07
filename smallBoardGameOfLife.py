@@ -42,7 +42,11 @@ def space(event):               #does the same thing as the next gen button but 
 
 
 def glider():                #makes a glider when button pressed
-    
+    data["matrix"][1][1] = 1
+    data["matrix"][1][1] = 1
+    data["matrix"][1][1] = 1
+    data["matrix"][1][1] = 1
+    data["matrix"][1][1] = 1
 
 def redrawAll():                            #redraws the board based on matrix data
     for item in App().spritelist[:]:
@@ -120,7 +124,6 @@ if __name__ == '__main__':
     data["matrix"] = buildBoard()
     data["steps"] = 0
     data["generation"] = -1
-    data["stop"] = False
 
     black = Color(0x000000,0.25)
     fullblack = Color(0x000000,1)
