@@ -38,6 +38,7 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
     
     elif 220<= event.x <=320 and 420<=event.y<=480:          #stop button
         data["stop"]=True
+        print ("STOP THE TRAIN")
 
 
 def space(event):               #does the same thing as the next gen button but uses the spacebar
