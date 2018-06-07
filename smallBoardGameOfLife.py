@@ -53,6 +53,10 @@ def runContinuous():                #runs the program at step intervals
         data["steps"] += 1
         if data["steps"]%1000 == 0:
             redrawAll()
+    elif data["stop"]==True:
+        App().listenMouseEvent("click",mouseClick)
+        App().listenKeyEvent('keydown','space', space)
+        App().run()
 
 def redrawAll():                            #redraws the board based on matrix data
     for item in App().spritelist[:]:
