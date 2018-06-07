@@ -45,6 +45,7 @@ def space(event):               #does the same thing as the next gen button but 
 
 
 def runContinuous():                #runs the program at step intervals
+    App().listenMouseEvent("click",mouseClick)
     App().run(runContinuous)
     data["steps"] += 1
     if data["steps"]%500 == 0 and data["stop"] = False:
