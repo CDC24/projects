@@ -34,6 +34,7 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
         redrawAll()
         
     elif 110<= event.x <=210 and 420<=event.y<=480:          #run button
+        data["stop"]=False
         runContinuous()
     
     elif 220<= event.x <=320 and 420<=event.y<=480:          #stop button
@@ -48,9 +49,10 @@ def space(event):               #does the same thing as the next gen button but 
 def runContinuous():                #runs the program at step intervals
     App().listenMouseEvent("click",mouseClick)
     App().run(runContinuous)
-    data["steps"] += 1
-    if data["steps"]%1000 == 0 and data["stop"] == False:
-        redrawAll()
+    if data["stop"]==False:
+        data["steps"] += 1
+        if data["steps"]%1000 == 0:
+            redrawAll()
 
 def redrawAll():                            #redraws the board based on matrix data
     for item in App().spritelist[:]:
