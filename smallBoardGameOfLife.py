@@ -34,7 +34,6 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
         redrawAll()
         
     elif 110<= event.x <=210 and 420<=event.y<=480:          #glider button
-        print("glider")
         glider()
         
     elif 220<= event.x <=320 and 420<=event.y<=480:          #plus button
