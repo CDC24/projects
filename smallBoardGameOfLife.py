@@ -37,7 +37,7 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
         ghlider()
         
     elif 220<= event.x <=320 and 420<=event.y<=480:          #plus button
-        plus()
+        pplus()
 
 
 def space(event):               #does the SAME THING as the next gen button but uses the spacebar
@@ -56,7 +56,7 @@ def ghlider():                #makes a glider on board when button pressed
     Sprite(liveCell,(80,120))
     Sprite(liveCell,(40,120))
     
-def plus():                #makes a plus on board when button pressed
+def pplus():                #makes a plus on board when button pressed
     data["matrix"][5][4] = 1        #changes matrix
     data["matrix"][4][4] = 1
     data["matrix"][3][4] = 1
