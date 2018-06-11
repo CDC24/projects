@@ -55,7 +55,6 @@ def ghlider():                #makes a glider on board when button pressed
     Sprite(liveCell,(120,120))
     Sprite(liveCell,(80,120))
     Sprite(liveCell,(40,120))
-    print (data["matrix"])
     
 def plus():                #makes a plus on board when button pressed
     data["matrix"][5][4] = 1        #changes matrix
