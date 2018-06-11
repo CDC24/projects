@@ -34,7 +34,7 @@ def mouseClick(event):          #deals with mouse click coordinates and resultin
         redrawAll()
         
     elif 110<= event.x <=210 and 420<=event.y<=480:          #glider button
-        glider()
+        ghlider()
         
     elif 220<= event.x <=320 and 420<=event.y<=480:          #plus button
         plus()
@@ -44,7 +44,7 @@ def space(event):               #does the SAME THING as the next gen button but 
     redrawAll()
 
 
-def glider():                #makes a glider on board when button pressed
+def ghlider():                #makes a glider on board when button pressed
     data["matrix"][2][1] = 1        #changes matrix
     data["matrix"][3][2] = 1
     data["matrix"][3][3] = 1
